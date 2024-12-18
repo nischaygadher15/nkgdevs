@@ -17,7 +17,7 @@ const Navbar = () => {
     console.log("menu changed");
   };
   return (
-    <div className="px-6 sm:p-0 container h-16 bg-white flex flex-wrap justify-between items-center">
+    <div className="container px-6 sm:p-0  h-16 bg-white flex flex-wrap justify-between items-center">
       <div className="text-2xl">
         <p>{`<NKG />`}</p>
       </div>

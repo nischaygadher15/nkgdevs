@@ -10,24 +10,29 @@ import { FiGithub } from "react-icons/fi";
 const Home = () => {
   return (
     <section
-      className="flex flex-col items-center sm:flex-row sm:justify-between gap-12"
+      className="flex flex-col justify-evenly items-center sm:flex-row sm:justify-between gap-12"
       style={{
         height: "calc(100vh - 64px)",
       }}
     >
       {/* <============== Image File ============> */}
       <div className="w-full sm:w-2/5 flex flex-wrap justify-center items-center">
-        <img
-          src={devPic}
-          alt="Dev Pic"
-          className="w-3/5 md:w-4/5 ld:w-3/5 sm:h-3/5"
-          style={{ boxShadow: "16px 16px 0px gray" }}
-        />
+        <div className="relative px-4 sm:p-0 flex justify-center w-3/5 sm:w-4/5 ld:w-3/5 sm:h-3/5">
+          <img
+            src={devPic}
+            alt="Dev Pic"
+            id="userPic"
+            className="w-full sm:h-80"
+          />
+          <div className="absolute top-4 sm:left-4 w-full h-full bg-gray-400 -z-10"></div>
+        </div>
       </div>
 
       {/* <============== Introduction Text ============> */}
       <div className="w-full sm:w-3/5 flex flex-col flex-wrap justify-center">
-        <p className="text-5xl font-bold mb-4">Hi, I'm Nischay &#128591;</p>
+        <p className="text-4xl text-center sm:text-left sm:text-5xl font-bold mb-4">
+          Hi, I'm Nischay &#128591;
+        </p>
         <p>
           I am a passionate Full-Stack Developer with expertise in crafting
           dynamic, scalable, and user-centric web applications. I specialize in
@@ -46,7 +51,7 @@ const Home = () => {
             <span>Available for new projects</span>
           </li>
         </ul>
-        <ul className="flex gap-5 text-xl">
+        <ul className="flex justify-center gap-10 text-2xl sm:text-xl">
           <li>
             <a href="https://github.com/nischaygadher15">
               <FiGithub />

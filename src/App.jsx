@@ -8,13 +8,13 @@ function App() {
 
   return (
     <div className="w-full h-full relative flex flex-col items-center">
-      <header className="container p-4 sm:p-0 fixed">
-        <Navbar className="w-full h-full" />
+      <header className="w-full fixed z-50 flex justify-center shadow-md">
+        <Navbar />
       </header>
-      <main className="container p-4 sm:p-0 absolute" style={{ top: "64px" }}>
+      <main className="container px-6 sm:p-0 absolute" style={{ top: "64px" }}>
         <Home />
       </main>
-      <footer className="container p-4 sm:p-0"></footer>
+      <footer className="container px-6 sm:p-0"></footer>
     </div>
   );
 }

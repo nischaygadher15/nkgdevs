@@ -1,8 +1,8 @@
 .expNavBar {
   width: 100%;
-  height: calc(100vh - 68px);
+  height: calc(100vh - 64px);
   position: fixed;
-  top: 68px;
+  top: 64px;
   left: 0px;
   background-color: white;
 }

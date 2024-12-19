@@ -1,5 +1,7 @@
 import React, { useState } from "react";
+import { FaGreaterThan, FaLessThan } from "react-icons/fa";
 import { FiSun } from "react-icons/fi";
+import { RiArrowLeftWideFill, RiArrowRightWideFill } from "react-icons/ri";
 import { RxHamburgerMenu } from "react-icons/rx";
 
 const Navbar = () => {
@@ -19,7 +21,7 @@ const Navbar = () => {
   return (
     <div className="container px-6 sm:p-0  h-16 bg-white flex flex-wrap justify-between items-center">
       <div className="text-2xl">
-        <p>{`<NKG />`}</p>
+        <p className="font-bold">{`<NKG />`}</p>
       </div>
       <div className="flex flex-wrap justify-evenly items-center  text-base">
         <nav
@@ -28,7 +30,7 @@ const Navbar = () => {
           }`}
         >
           <a href="#home">Home</a>
-          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
           <a href="#edu">Education</a>
           <a href="#projects">Projects</a>
           <a href="#contact">Contact</a>

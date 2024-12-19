@@ -9,9 +9,12 @@ import { FiGithub } from "react-icons/fi";
 
 const Home = () => {
   return (
-    <section className="h-screen flex flex-col justify-evenly items-center sm:flex-row sm:justify-between">
+    <section
+      className="h-screen flex flex-col items-center sm:flex-row justify-center"
+      id="home"
+    >
       {/* <============== Image File ============> */}
-      <div className="order-1 sm:order-2 w-full sm:w-2/5 flex flex-wrap justify-center items-center">
+      <div className="order-1 sm:order-2 w-full sm:w-2/5 flex flex-wrap justify-center items-center my-10">
         <div className="relative px-4 sm:p-0 flex justify-center w-3/5 sm:w-4/5 ld:w-3/5 sm:h-3/5">
           <img
             src={devPic}

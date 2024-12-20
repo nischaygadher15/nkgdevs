@@ -15,7 +15,7 @@ import { VscVscode } from "react-icons/vsc";
 const Skills = () => {
   return (
     <section
-      className="h-screen md:px-24 flex flex-wrap flex-col justify-center"
+      className="h-screen md:px-24 flex flex-wrap flex-col justify-center bg-gray-100"
       id="skills"
     >
       <div className="text-center my-7">
@@ -26,7 +26,7 @@ const Skills = () => {
           The Skills, tools and technologies I am good at:
         </p>
       </div>
-      <ul className="lg:px-24 grid grid-cols-3 sm:grid-cols-4 text-7xl gap-x-24 gap-y-6">
+      <ul className="lg:px-24 grid grid-cols-3 sm:grid-cols-4 text-5xl sm:text-7xl sm:gap-x-24 gap-x-6 gap-y-6">
         <li>
           <FaHtml5 className="mx-auto mb-2" style={{ color: "#F16A30" }} />
           <p className="text-base text-center">HTML</p>

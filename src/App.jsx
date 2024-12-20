@@ -3,6 +3,7 @@ import "./App.css";
 import Navbar from "./Components/Navbar";
 import Home from "./Components/Home";
 import Skills from "./Components/Skills";
+import Experience from "./Components/Experience";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -15,6 +16,7 @@ function App() {
       <main className="container px-6 sm:p-0">
         <Home />
         <Skills />
+        <Experience />
       </main>
       <footer className="container px-6 sm:p-0"></footer>
     </div>

@@ -31,7 +31,7 @@ const Navbar = () => {
         >
           <a href="#home">Home</a>
           <a href="#skills">Skills</a>
-          <a href="#edu">Education</a>
+          <a href="#exps">Experience</a>
           <a href="#projects">Projects</a>
           <a href="#contact">Contact</a>
           <FiSun className="hidden md:block text-xl cursor-pointer" />

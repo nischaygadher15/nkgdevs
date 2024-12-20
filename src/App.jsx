@@ -4,6 +4,8 @@ import Navbar from "./Components/Navbar";
 import Home from "./Components/Home";
 import Skills from "./Components/Skills";
 import Experience from "./Components/Experience";
+import Education from "./Components/Education";
+import Projects from "./Components/Projects";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -17,6 +19,8 @@ function App() {
         <Home />
         <Skills />
         <Experience />
+        <Education />
+        <Projects />
       </main>
       <footer className="container px-6 sm:p-0"></footer>
     </div>

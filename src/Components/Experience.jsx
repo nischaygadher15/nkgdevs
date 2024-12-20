@@ -16,6 +16,8 @@ const Experience = () => {
           Here is a quick summary of my most recent experiences:
         </p>
       </div>
+
+      {/* List of Companies */}
       <ul className="xl:px-24">
         {/* Company 1 */}
         <li className="flex flex-col md:flex-row items-start p-7 bg-gray-100 rounded-md mb-12 shadow-md">
@@ -23,7 +25,7 @@ const Experience = () => {
             <img
               src={asstron}
               alt="Asstron Logo"
-              className="w-1/2 md:w-full h-16"
+              className="w-full sm:w-1/2 md:w-full h-16"
             />
           </div>
           <div className="order-3 md:order-2 w-full mb-4 md:mb-0 md:w-1/2 px-5">
@@ -54,7 +56,11 @@ const Experience = () => {
         {/* Company 2 */}
         <li className="flex flex-col md:flex-row items-start p-7 bg-gray-100 rounded-md mb-12 shadow-md">
           <div className="order-1 w-full mb-4 md:mb-0 md:w-1/3 pe-5">
-            <img src={hdfc} alt="HDFC Logo" className="w-1/2 md:w-full h-16" />
+            <img
+              src={hdfc}
+              alt="HDFC Logo"
+              className="w-full sm:w-1/2 md:w-full h-16"
+            />
           </div>
           <div className="order-3 md:order-2 w-full mb-4 md:mb-0 md:w-1/2 px-5">
             <p className="font-bold text-xl mb-3">

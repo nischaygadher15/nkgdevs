@@ -32,7 +32,8 @@ const Navbar = () => {
           <a href="#home">Home</a>
           <a href="#skills">Skills</a>
           <a href="#exps">Experience</a>
-          <a href="#projects">Projects</a>
+          <a href="#edu">Education</a>
+          <a href="#project">Projects</a>
           <a href="#contact">Contact</a>
           <FiSun className="hidden md:block text-xl cursor-pointer" />
           <button className="w-1/2 md:w-auto bg-gray-900 text-white mx-auto md:mx-0 px-3 py-4 md:py-1 rounded-md">

@@ -2,7 +2,13 @@ import React from "react";
 import { AiOutlineFacebook } from "react-icons/ai";
 import { BsTwitterX } from "react-icons/bs";
 import { CiLinkedin } from "react-icons/ci";
-import { FaCircle, FaFacebookF, FaGithub, FaLinkedinIn } from "react-icons/fa";
+import {
+  FaCircle,
+  FaFacebookF,
+  FaGithub,
+  FaInstagram,
+  FaLinkedinIn,
+} from "react-icons/fa";
 import { IoLocationOutline } from "react-icons/io5";
 import devPic from "../assets/nischay.jpg";
 import { FiGithub } from "react-icons/fi";
@@ -50,24 +56,29 @@ const Home = () => {
           </li>
         </ul>
         <ul className="flex justify-start gap-10 text-2xl sm:text-xl">
-          <li>
+          <li className="p-1 hover:bg-black hover:text-white hover:rounded-md hover:shadow-md">
             <a href="https://github.com/nischaygadher15">
               <FiGithub />
             </a>
           </li>
-          <li>
+          <li className="p-1 hover:bg-blue-600 hover:text-white hover:rounded-md hover:shadow-md">
             <a href="https://www.linkedin.com/in/nischay-gadher">
               <FaLinkedinIn />
             </a>
           </li>
-          <li>
+          <li className="p-1 hover:bg-black hover:text-white hover:rounded-md hover:shadow-md">
             <a href="https://x.com/NGadher15">
               <BsTwitterX />
             </a>
           </li>
-          <li>
+          <li className="p-1 hover:bg-blue-600 hover:text-white hover:rounded-md hover:shadow-md">
             <a href="https://www.facebook.com/nischay.gadher.1">
               <FaFacebookF />
+            </a>
+          </li>
+          <li className="p-1 hover:bg-gradient-to-bl from-purple-500 via-pink-500 to-yellow-500 hover:text-white hover:rounded-md hover:shadow-md">
+            <a href="https://www.instagram.com/gadhernischay/">
+              <FaInstagram />
             </a>
           </li>
         </ul>

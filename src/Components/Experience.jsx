@@ -20,7 +20,7 @@ const Experience = () => {
       {/* List of Companies */}
       <ul className="xl:px-24">
         {/* Company 1 */}
-        <li className="flex flex-col md:flex-row items-start p-7 bg-gray-100 rounded-md mb-12 shadow-md">
+        <li className="flex flex-col md:flex-row items-start p-4 sm:p-7 bg-gray-100 rounded-md mb-12 shadow-md">
           <div className="order-1 w-full mb-4 md:mb-0 md:w-1/3 pe-5">
             <img
               src={asstron}
@@ -28,7 +28,7 @@ const Experience = () => {
               className="w-full sm:w-1/2 md:w-full h-16"
             />
           </div>
-          <div className="order-3 md:order-2 w-full mb-4 md:mb-0 md:w-1/2 px-5">
+          <div className="order-3 md:order-2 w-full mb-4 md:mb-0 md:w-1/2 sm:px-5">
             <p className="font-bold text-xl mb-3">Client Service Executive</p>
             <ul className="list-disc ps-8">
               <li className="mb-3">
@@ -48,13 +48,13 @@ const Experience = () => {
               </li>
             </ul>
           </div>
-          <div className="order-2 md:order-3 w-full mb-4 md:mb-0 md:w-1/4 px-5 text-left md:text-right text-lg">
+          <div className="order-2 md:order-3 w-full mb-4 md:mb-0 md:w-1/4 sm:px-5 text-left md:text-right text-lg">
             Dec 2023 to Dec 2024
           </div>
         </li>
 
         {/* Company 2 */}
-        <li className="flex flex-col md:flex-row items-start p-7 bg-gray-100 rounded-md mb-12 shadow-md">
+        <li className="flex flex-col md:flex-row items-start p-4 sm:p-7 bg-gray-100 rounded-md mb-12 shadow-md">
           <div className="order-1 w-full mb-4 md:mb-0 md:w-1/3 pe-5">
             <img
               src={hdfc}
@@ -62,7 +62,7 @@ const Experience = () => {
               className="w-full sm:w-1/2 md:w-full h-16"
             />
           </div>
-          <div className="order-3 md:order-2 w-full mb-4 md:mb-0 md:w-1/2 px-5">
+          <div className="order-3 md:order-2 w-full mb-4 md:mb-0 md:w-1/2 sm:px-5">
             <p className="font-bold text-xl mb-3">
               Virtual Customer Care Officer
             </p>
@@ -84,7 +84,7 @@ const Experience = () => {
               </li>
             </ul>
           </div>
-          <div className="order-2 md:order-3 w-full mb-4 md:mb-0 md:w-1/4 px-5 text-left md:text-right text-lg">
+          <div className="order-2 md:order-3 w-full mb-4 md:mb-0 md:w-1/4 sm:px-5 text-left md:text-right text-lg">
             Mar 2023 to Nov 2023
           </div>
         </li>

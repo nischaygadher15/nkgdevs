@@ -1,5 +1,4 @@
 import React from "react";
-import logicrays from "../assets/logicrays_academy_logo.jpeg";
 
 const Education = () => {
   return (
@@ -18,8 +17,8 @@ const Education = () => {
 
       <ul className="xl:px-24">
         {/* Education 1 */}
-        <li className="flex flex-col md:flex-row items-start p-7 bg-gray-100 rounded-md mb-12 shadow-md">
-          <div className="w-full mb-4 md:mb-0 md:w-3/4 px-5">
+        <li className="flex flex-col md:flex-row items-start p-4 sm:p-7 bg-gray-100 rounded-md mb-12 shadow-md">
+          <div className="w-full mb-4 md:mb-0 md:w-3/4 sm:px-5">
             <p className="font-bold text-xl mb-3">Full Stack Developer(MERN)</p>
             <p className="text-base mb-3 flex">
               Logicrays Acedemy, Ahmedadabad
@@ -54,8 +53,8 @@ const Education = () => {
         </li>
 
         {/* Education 2 */}
-        <li className="flex flex-col md:flex-row items-start p-7 bg-gray-100 rounded-md mb-12 shadow-md">
-          <div className="w-full mb-4 md:mb-0 md:w-3/4 px-5">
+        <li className="flex flex-col md:flex-row items-start p-4 sm:p-7 bg-gray-100 rounded-md mb-12 shadow-md">
+          <div className="w-full mb-4 md:mb-0 md:w-3/4 sm:px-5">
             <p className="font-bold text-xl mb-3">Electrical Engineering</p>
             <p className="mb-3">
               Snajaybhai Rajguru College of Engineering, Rajkot

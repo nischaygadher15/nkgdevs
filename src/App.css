@@ -1,8 +1,9 @@
-.expNavBar {
-  width: 100%;
-  height: calc(100vh - 64px);
-  position: fixed;
-  top: 64px;
-  left: 0px;
-  background-color: white;
+#navDrawer {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 300ms linear;
+}
+
+#navDrawerContent {
+  overflow: hidden;
 }

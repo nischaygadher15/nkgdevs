@@ -8,11 +8,9 @@ import Education from "./Components/Education";
 import Projects from "./Components/Projects";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <div className="w-full h-full relative flex flex-col items-center">
-      <header className="w-full fixed z-50 flex justify-center shadow-md">
+      <header className="w-full bg-white fixed z-30 flex justify-center shadow-md">
         <Navbar />
       </header>
       <main className="container px-6">

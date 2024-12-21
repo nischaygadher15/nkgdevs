@@ -11,8 +11,10 @@ const Navbar = () => {
     if (navDrawer != null) {
       if (menuStatus) {
         navDrawer.style.gridTemplateRows = "1fr";
+        navDrawer.style.height = "calc(100vh - 64px)";
       } else {
         navDrawer.style.gridTemplateRows = "0fr";
+        navDrawer.style.height = "auto";
       }
     }
   };
@@ -40,34 +42,6 @@ const Navbar = () => {
 
         {/* Nav Links */}
         <div className="flex flex-wrap justify-evenly items-center  text-base">
-          {/* <nav
-          className={`p-6 md:p-0 md:flex flex-col md:flex-row items-start flex-wrap md:items-center gap-4 lg:gap-6 text-xl md:text-base ${
-            menu ? "expNavBar flex" : "hidden"
-          }`}
-        >
-          <a href="#home" onClick={closeMenu}>
-            Home
-          </a>
-          <a href="#skills" onClick={closeMenu}>
-            Skills
-          </a>
-          <a href="#exps" onClick={closeMenu}>
-            Experience
-          </a>
-          <a href="#edu" onClick={closeMenu}>
-            Education
-          </a>
-          <a href="#project" onClick={closeMenu}>
-            Projects
-          </a>
-          <a href="#contact" onClick={closeMenu}>
-            Contact
-          </a>
-          <FiSun className="hidden md:block text-xl cursor-pointer" />
-          <button className="w-1/2 md:w-auto bg-gray-900 text-white mx-auto md:mx-0 px-3 py-4 md:py-1 rounded-md">
-            Download CV
-          </button>
-        </nav> */}
           <nav
             className={`p-6 md:p-0 hidden md:flex flex-col md:flex-row items-start flex-wrap md:items-center gap-4 lg:gap-6 text-xl md:text-base`}
           >
@@ -104,22 +78,46 @@ const Navbar = () => {
       <div id="navDrawer" className="bg-white">
         <div id="navDrawerContent">
           <nav className="py-6 flex flex-wrap flex-col">
-            <a href="#home" className="py-4 px-6 hover:bg-gray-400">
+            <a
+              href="#home"
+              className="py-4 px-6 hover:bg-gray-400"
+              onClick={closeMenu}
+            >
               Home
             </a>
-            <a href="#skills" className="py-4 px-6 hover:bg-gray-400">
+            <a
+              href="#skills"
+              className="py-4 px-6 hover:bg-gray-400"
+              onClick={closeMenu}
+            >
               Skills
             </a>
-            <a href="#exps" className="py-4 px-6 hover:bg-gray-400">
+            <a
+              href="#exps"
+              className="py-4 px-6 hover:bg-gray-400"
+              onClick={closeMenu}
+            >
               Experience
             </a>
-            <a href="#edu" className="py-4 px-6 hover:bg-gray-400">
+            <a
+              href="#edu"
+              className="py-4 px-6 hover:bg-gray-400"
+              onClick={closeMenu}
+            >
               Education
             </a>
-            <a href="#project" className="py-4 px-6 hover:bg-gray-400">
+            <a
+              href="#project"
+              className="py-4 px-6 hover:bg-gray-400"
+              onClick={closeMenu}
+            >
               Projects
             </a>
-            <a href="#contact" className="py-4 px-6 hover:bg-gray-400">
+            <a
+              href="#contact"
+              className="py-4 px-6 hover:bg-gray-400"
+              onClick={closeMenu}
+            >
               Contact
             </a>
 

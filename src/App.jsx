@@ -6,6 +6,7 @@ import Skills from "./Components/Skills";
 import Experience from "./Components/Experience";
 import Education from "./Components/Education";
 import Projects from "./Components/Projects";
+import Contact from "./Components/Contact";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Experience />
         <Education />
         <Projects />
+        <Contact />
       </main>
       <footer className="container px-6 sm:p-0"></footer>
     </div>

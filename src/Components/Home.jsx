@@ -35,10 +35,10 @@ const Home = () => {
       {/* <============== Introduction Text ============> */}
       <div className="order-2 sm:order-1 w-full sm:w-3/5 overflow-hidden flex flex-col flex-wrap justify-center">
         <p
-          className="flex flex-row sm:flex-col xl:flex-row text-3xl sm:text-4xl md:text-5xl font-bold mb-4"
+          className="max-w-full flex flex-col lg:flex-row text-2xl sm:text-3xl md:text-4xl font-bold mb-4"
           id="typedAnimation"
         >
-          <span className="text-nowrap">Hi &#128591;,&nbsp;</span>
+          <span className="text-nowrap">&#128591; Hi,&nbsp;</span>
           <ReactTyped
             strings={[
               "I'm Nischay",
@@ -47,14 +47,14 @@ const Home = () => {
             ]}
             typeSpeed={70}
             backSpeed={50}
-            attr="placeholder"
+            attr="value"
             loop
           >
             <input
               type="text"
-              className="outline-none"
+              className="outline-none max-w-full"
               disabled
-              maxLength={24}
+              // style={{ maxWidth: "350px" }}
             />
           </ReactTyped>
         </p>

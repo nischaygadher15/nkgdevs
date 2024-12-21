@@ -11,6 +11,7 @@ import {
 import { IoLocationOutline } from "react-icons/io5";
 import devPic from "../assets/nischay.jpg";
 import { FiGithub } from "react-icons/fi";
+import { ReactTyped } from "react-typed";
 
 const Home = () => {
   return (
@@ -19,7 +20,7 @@ const Home = () => {
       id="home"
     >
       {/* <============== Image File ============> */}
-      <div className="order-1 sm:order-2 w-full sm:w-2/5 flex flex-wrap justify-center items-center my-10">
+      <div className="order-1 sm:order-2 w-full sm:w-2/5 flex flex-wrap justify-center items-center mb-10">
         <div className="relative px-4 sm:p-0 flex justify-center w-3/5 sm:w-4/5 ld:w-3/5 sm:h-3/5">
           <img
             src={devPic}
@@ -32,11 +33,32 @@ const Home = () => {
       </div>
 
       {/* <============== Introduction Text ============> */}
-      <div className="order-2 sm:order-1 w-full sm:w-3/5 flex flex-col flex-wrap justify-center">
-        <p className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
-          Hi, I'm Nischay &#128591;
+      <div className="order-2 sm:order-1 w-full sm:w-3/5 overflow-hidden flex flex-col flex-wrap justify-center">
+        <p
+          className="flex flex-row sm:flex-col xl:flex-row text-3xl sm:text-4xl md:text-5xl font-bold mb-4"
+          id="typedAnimation"
+        >
+          <span className="text-nowrap">Hi &#128591;,&nbsp;</span>
+          <ReactTyped
+            strings={[
+              "I'm Nischay",
+              "I'm Full Stack Developer",
+              "I Love Coding.",
+            ]}
+            typeSpeed={70}
+            backSpeed={50}
+            attr="placeholder"
+            loop
+          >
+            <input
+              type="text"
+              className="outline-none"
+              disabled
+              maxLength={24}
+            />
+          </ReactTyped>
         </p>
-        <p>
+        <p className="text-wrap">
           I am a passionate Full-Stack Developer with expertise in crafting
           dynamic, scalable, and user-centric web applications. I specialize in
           both front-end and back-end development, seamlessly bridging the gap

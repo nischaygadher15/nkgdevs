@@ -117,8 +117,8 @@ const Contact = () => {
             </div>
             <input
               type="email"
-              name="cname"
-              id="cname"
+              name="cmail"
+              id="cmail"
               className="h-10 p-4"
               placeholder="Email"
               style={{ width: "100%" }}

@@ -1,3 +1,7 @@
+#typedAnimation ::placeholder {
+  color: black !important;
+}
+
 #navDrawer {
   display: grid;
   grid-template-rows: 0fr;

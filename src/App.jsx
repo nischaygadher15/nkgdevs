@@ -22,7 +22,23 @@ function App() {
         <Projects />
         <Contact />
       </main>
-      <footer className="container px-6 sm:p-0"></footer>
+      <footer className="container px-6 sm:p-0">
+        <div className="flex flex-col sm:flex-row justify-center text-center bg-gray-200 p-5 my-5">
+          <p className="sm:border-r-2 sm:border-gray-900 px-2">&copy; 2024</p>
+          <p className="sm:border-r-2 sm:border-gray-900 px-2">
+            Designed by :&nbsp;
+            <a
+              href="https://www.figma.com/@shahsagarm"
+              className="underline underline-offset-2"
+            >
+              Sagar Shah
+            </a>
+          </p>
+          <p className="sm:border-r-2 sm:border-gray-900 px-2">
+            Coded by: Nischay Gadher
+          </p>
+        </div>
+      </footer>
     </div>
   );
 }

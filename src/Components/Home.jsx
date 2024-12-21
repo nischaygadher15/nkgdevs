@@ -38,7 +38,9 @@ const Home = () => {
           className="max-w-full flex flex-col lg:flex-row text-2xl sm:text-3xl md:text-4xl font-bold mb-4"
           id="typedAnimation"
         >
-          <span className="text-nowrap">&#128591; Hi,&nbsp;</span>
+          <span className="text-nowrap text-center sm:text-left">
+            &#128591; Hi,&nbsp;
+          </span>
           <ReactTyped
             strings={[
               "I'm Nischay",
@@ -52,7 +54,7 @@ const Home = () => {
           >
             <input
               type="text"
-              className="outline-none max-w-full"
+              className="outline-none max-w-full text-center sm:text-left"
               disabled
               // style={{ maxWidth: "350px" }}
             />

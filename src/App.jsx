@@ -15,7 +15,7 @@ function App() {
       <header className="w-full fixed z-50 flex justify-center shadow-md">
         <Navbar />
       </header>
-      <main className="container px-6 sm:p-0">
+      <main className="container px-6">
         <Home />
         <Skills />
         <Experience />

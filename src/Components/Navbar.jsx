@@ -14,27 +14,38 @@ const Navbar = () => {
   //   backgroundColor: "white",
   // };
 
-  let handleMenu = () => {
-    setMenu(!menu);
-    console.log("menu changed");
-  };
+  let handleMenu = () => setMenu(!menu);
+
+  let closeMenu = () => setMenu(false);
   return (
-    <div className="container px-6 sm:p-0  h-16 bg-white flex flex-wrap justify-between items-center">
+    <div className="container px-6 h-16 bg-white flex flex-wrap justify-between items-center">
       <div className="text-2xl">
         <p className="font-bold">{`<NKG />`}</p>
       </div>
       <div className="flex flex-wrap justify-evenly items-center  text-base">
         <nav
-          className={`p-6 md:p-0 md:flex flex-col md:flex-row items-start flex-wrap md:items-center gap-6 text-xl md:text-base ${
+          className={`p-6 md:p-0 md:flex flex-col md:flex-row items-start flex-wrap md:items-center gap-4 lg:gap-6 text-xl md:text-base ${
             menu ? "expNavBar flex" : "hidden"
           }`}
         >
-          <a href="#home">Home</a>
-          <a href="#skills">Skills</a>
-          <a href="#exps">Experience</a>
-          <a href="#edu">Education</a>
-          <a href="#project">Projects</a>
-          <a href="#contact">Contact</a>
+          <a href="#home" onClick={closeMenu}>
+            Home
+          </a>
+          <a href="#skills" onClick={closeMenu}>
+            Skills
+          </a>
+          <a href="#exps" onClick={closeMenu}>
+            Experience
+          </a>
+          <a href="#edu" onClick={closeMenu}>
+            Education
+          </a>
+          <a href="#project" onClick={closeMenu}>
+            Projects
+          </a>
+          <a href="#contact" onClick={closeMenu}>
+            Contact
+          </a>
           <FiSun className="hidden md:block text-xl cursor-pointer" />
           <button className="w-1/2 md:w-auto bg-gray-900 text-white mx-auto md:mx-0 px-3 py-4 md:py-1 rounded-md">
             Download CV

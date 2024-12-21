@@ -15,7 +15,7 @@ import { VscVscode } from "react-icons/vsc";
 const Skills = () => {
   return (
     <section
-      className="h-screen md:px-24 flex flex-wrap flex-col justify-center"
+      className="min-h-screen pt-24 md:px-24 flex flex-wrap flex-col justify-center"
       id="skills"
     >
       <div className="text-center my-7">

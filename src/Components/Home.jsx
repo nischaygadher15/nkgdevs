@@ -5,7 +5,6 @@ import { CiLinkedin } from "react-icons/ci";
 import {
   FaCircle,
   FaFacebookF,
-  FaGithub,
   FaInstagram,
   FaLinkedinIn,
 } from "react-icons/fa";
@@ -16,7 +15,7 @@ import { FiGithub } from "react-icons/fi";
 const Home = () => {
   return (
     <section
-      className="h-screen flex flex-col items-center sm:flex-row justify-center"
+      className="min-h-screen pt-24 flex flex-col sm:flex-row justify-center items-center"
       id="home"
     >
       {/* <============== Image File ============> */}
@@ -34,7 +33,7 @@ const Home = () => {
 
       {/* <============== Introduction Text ============> */}
       <div className="order-2 sm:order-1 w-full sm:w-3/5 flex flex-col flex-wrap justify-center">
-        <p className="text-4xl sm:text-5xl font-bold mb-4">
+        <p className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
           Hi, I'm Nischay &#128591;
         </p>
         <p>
@@ -55,7 +54,7 @@ const Home = () => {
             <span>Available for new projects</span>
           </li>
         </ul>
-        <ul className="flex justify-start gap-10 text-2xl sm:text-xl">
+        <ul className="flex justify-evenly sm:justify-start sm:gap-10 text-2xl sm:text-xl">
           <li className="p-1 hover:bg-black hover:text-white hover:rounded-md hover:shadow-md">
             <a href="https://github.com/nischaygadher15">
               <FiGithub />

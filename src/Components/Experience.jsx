@@ -5,7 +5,7 @@ import asstron from "../assets/asstron.png";
 const Experience = () => {
   return (
     <section
-      className="min-h-screen py-24 flex flex-wrap flex-col justify-center bg-white"
+      className="min-h-screen pt-24 flex flex-wrap flex-col justify-center bg-white"
       id="exps"
     >
       <div className="text-center my-7">

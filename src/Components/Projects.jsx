@@ -10,7 +10,7 @@ import portfolio from "../assets/portfolio.png";
 const Projects = () => {
   return (
     <section
-      className="min-h-screen lg:px-24 flex flex-wrap flex-col justify-center"
+      className="min-h-screen pt-24 lg:px-24 flex flex-wrap flex-col justify-center"
       id="project"
     >
       <div className="text-center my-7">

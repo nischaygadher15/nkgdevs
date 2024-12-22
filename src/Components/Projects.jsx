@@ -118,7 +118,7 @@ const Projects = () => {
             />
           </div>
           <div className="order-2 w-full mb-4 md:mb-0 md:w-1/2 sm:px-5">
-            <p className="font-bold text-xl mb-3">Citizen Solor</p>
+            <p className="font-bold text-xl mb-3">Citizen Solar</p>
             <p>
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente
               asperiores optio consequuntur cum dolor exercitationem, molestias

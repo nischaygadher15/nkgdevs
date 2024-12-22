@@ -1,7 +1,5 @@
 import React from "react";
-import { AiOutlineFacebook } from "react-icons/ai";
 import { BsTwitterX } from "react-icons/bs";
-import { CiLinkedin } from "react-icons/ci";
 import {
   FaCircle,
   FaFacebookF,
@@ -35,7 +33,7 @@ const Home = () => {
       {/* <============== Introduction Text ============> */}
       <div className="order-2 sm:order-1 w-full sm:w-3/5 overflow-hidden flex flex-col flex-wrap justify-center">
         <p
-          className="max-w-full flex flex-col lg:flex-row text-2xl sm:text-3xl md:text-4xl font-bold mb-4"
+          className="max-w-full flex flex-col lg:flex-row text-2xl sm:text-3xl md:text-4xl font-bold mb-3"
           id="typedAnimation"
         >
           <span className="text-nowrap text-center sm:text-left">
@@ -54,20 +52,20 @@ const Home = () => {
           >
             <input
               type="text"
-              className="outline-none max-w-full text-center sm:text-left"
+              className="outline-none max-w-full text-center sm:text-left p-1"
               disabled
               // style={{ maxWidth: "350px" }}
             />
           </ReactTyped>
         </p>
         <p className="text-wrap">
-          I am a passionate Full-Stack Developer with expertise in crafting
-          dynamic, scalable, and user-centric web applications. I specialize in
-          both front-end and back-end development, seamlessly bridging the gap
-          between design and functionality.
+          I am a passionate React Developer with expertise in crafting dynamic,
+          scalable, and user-centric web applications. I specialize in both
+          front-end development, seamlessly bridging the gap between design and
+          functionality.
         </p>
         <ul className="list-none py-9">
-          <li className="flex items-center gap-3">
+          <li className="flex items-center gap-3 mb-2">
             <IoLocationOutline className="text-xl" />
             <span>Ahmedabad</span>
           </li>

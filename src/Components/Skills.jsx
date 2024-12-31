@@ -9,13 +9,14 @@ import {
 } from "react-icons/fa";
 import { IoLogoFirebase } from "react-icons/io5";
 import { RiTailwindCssFill } from "react-icons/ri";
-import { SiRedux } from "react-icons/si";
+import { SiFirebase, SiRedux } from "react-icons/si";
 import { VscVscode } from "react-icons/vsc";
+import firebase from "../assets/firebase.svg";
 
 const Skills = () => {
   return (
     <section
-      className="min-h-screen pt-24 md:px-24 flex flex-wrap flex-col justify-center"
+      className="min-h-screen pt-24 xl:px-24 flex flex-wrap flex-col justify-center"
       id="skills"
     >
       <div className="text-center my-7">
@@ -26,7 +27,10 @@ const Skills = () => {
           The Skills, tools and technologies I am good at:
         </p>
       </div>
-      <ul className="lg:px-24 grid grid-cols-3 sm:grid-cols-4 text-5xl sm:text-7xl sm:gap-x-24 gap-x- gap-y-6">
+      <ul
+        className="lg:px-24 grid grid-cols-3 sm:grid-cols-4 text-5xl sm:text-7xl sm:gap-x-9 md:gap-x-12
+       gap-y-6"
+      >
         <li>
           <FaHtml5 className="mx-auto mb-2" style={{ color: "#F16A30" }} />
           <p className="text-base text-center">HTML</p>
@@ -61,7 +65,7 @@ const Skills = () => {
         <li>
           <IoLogoFirebase
             className="mx-auto mb-2"
-            style={{ color: "#F7C427" }}
+            style={{ color: "#FFC400" }}
           />
           <p className="text-base text-center">FIREBASE</p>
         </li>

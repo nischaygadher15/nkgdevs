@@ -60,7 +60,7 @@ const Projects = () => {
 
             <div className="inline-block">
               <a
-                href="#"
+                href="https://nkgemart.netlify.app/"
                 className="flex flex-wrap items-center gap-2 rounded-md p-2 bg-blue-700 text-white"
               >
                 Visit Site

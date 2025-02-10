@@ -109,7 +109,7 @@ const Projects = () => {
         </li>
 
         {/* Project 2 */}
-        <li className="flex flex-col md:flex-row items-start p-4 sm:p-7 bg-gray-100 rounded-md mb-12 shadow-md">
+        {/* <li className="flex flex-col md:flex-row items-start p-4 sm:p-7 bg-gray-100 rounded-md mb-12 shadow-md">
           <div className="order-1 w-full mb-4 md:mb-0 md:w-1/2 sm:pe-5">
             <img
               src={citisensolor}
@@ -147,10 +147,10 @@ const Projects = () => {
               </a>
             </div>
           </div>
-        </li>
+        </li> */}
 
         {/* Project 3 */}
-        <li className="flex flex-col md:flex-row items-start p-4 sm:p-7 bg-gray-100 rounded-md mb-12 shadow-md">
+        {/* <li className="flex flex-col md:flex-row items-start p-4 sm:p-7 bg-gray-100 rounded-md mb-12 shadow-md">
           <div className="order-1 w-full mb-4 md:mb-0 md:w-1/2 sm:pe-5">
             <img
               src={foodwebsite}
@@ -188,10 +188,10 @@ const Projects = () => {
               </a>
             </div>
           </div>
-        </li>
+        </li> */}
 
         {/* Project 4 */}
-        <li className="flex flex-col md:flex-row items-start p-4 sm:p-7 bg-gray-100 rounded-md mb-12 shadow-md">
+        {/* <li className="flex flex-col md:flex-row items-start p-4 sm:p-7 bg-gray-100 rounded-md mb-12 shadow-md">
           <div className="order-1 w-full mb-4 md:mb-0 md:w-1/2 sm:pe-5">
             <img
               src={rugbywebsite}
@@ -229,10 +229,10 @@ const Projects = () => {
               </a>
             </div>
           </div>
-        </li>
+        </li> */}
 
         {/* Project 5*/}
-        <li className="flex flex-col md:flex-row items-start p-4 sm:p-7 bg-gray-100 rounded-md mb-12 shadow-md">
+        {/* <li className="flex flex-col md:flex-row items-start p-4 sm:p-7 bg-gray-100 rounded-md mb-12 shadow-md">
           <div className="order-1 w-full mb-4 md:mb-0 md:w-1/2 sm:pe-5">
             <img
               src={travelwebsite}
@@ -270,7 +270,7 @@ const Projects = () => {
               </a>
             </div>
           </div>
-        </li>
+        </li> */}
       </ul>
     </section>
   );

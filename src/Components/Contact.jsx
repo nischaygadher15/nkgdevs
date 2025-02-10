@@ -1,4 +1,5 @@
 import React from "react";
+import { useForm } from "react-hook-form";
 import { BsTwitterX } from "react-icons/bs";
 import {
   FaFacebookF,
@@ -11,12 +12,22 @@ import { IoCallSharp, IoLocationSharp, IoMailSharp } from "react-icons/io5";
 import { MdAlternateEmail } from "react-icons/md";
 
 const Contact = () => {
+  let {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
+
+  let sentForm = (data) => {
+    console.log(data);
+  };
+
   return (
     <section
       className="min-h-screen pt-24 xl:px-24 flex flex-wrap flex-col justify-start bg-white"
       id="contact"
     >
-      <div className="flex flex-col md:flex-row gap-5 w-full p-6 shadow-md bg-gray-300">
+      <div className="flex flex-col md:flex-row gap-5 w-full p-6 shadow-md border-2 border-gray-500 border-gray rounded">
         <div className="w-full md:w-2/5">
           {/* Intro Text */}
           <div className="text-center">
@@ -96,52 +107,87 @@ const Contact = () => {
           </ul>
         </div>
 
-        <form className="w-full md:w-3/5">
-          <div className="mb-7 flex items-center">
-            <div className="h-10 w-10 text-white bg-gray-500 flex justify-center items-center">
-              <FaUserAlt />
+        <form className="w-full md:w-3/5" onSubmit={handleSubmit(sentForm)}>
+          <div className={`${errors?.name?.message ? "mb-3" : "mb-7"}`}>
+            <div className="flex items-center">
+              <div className="h-10 w-10 text-white bg-gray-500 flex justify-center items-center">
+                <FaUserAlt />
+              </div>
+              <input
+                type="text"
+                {...register("name", {
+                  required: { value: true, message: "Name is required!" },
+                  minLength: {
+                    value: 3,
+                    message: "Name must be 3 character long!",
+                  },
+                  pattern: {
+                    value: /^[a-zA-Z]+/i,
+                    message: "Name must be start with alphabet.",
+                  },
+                })}
+                className="h-10 p-4 border-gray-500 border-2 rounded-e outline-none"
+                placeholder="Name"
+                style={{ width: "100%" }}
+              />
             </div>
-            <input
-              type="text"
-              name="cname"
-              id="cname"
-              className="h-10 p-4"
-              placeholder="Name"
-              style={{ width: "100%" }}
-            />
+
+            {errors.name && (
+              <small className="text-red-500">{errors.name.message}</small>
+            )}
           </div>
 
-          <div className="mb-7 flex items-center">
-            <div className="h-10 w-10 text-white bg-gray-500 flex justify-center items-center">
-              <MdAlternateEmail />
+          <div className={`${errors?.email?.message ? "mb-3" : "mb-7"}`}>
+            <div className="flex items-center">
+              <div className="h-10 w-10 text-white bg-gray-500 flex justify-center items-center">
+                <MdAlternateEmail />
+              </div>
+              <input
+                type="text"
+                {...register("email", {
+                  required: { value: true, message: "Email is required!" },
+                  pattern: {
+                    value: /^\S+@\S+\.\S+$/i,
+                    message: "Invalid email format!",
+                  },
+                })}
+                className="h-10 p-4 border-gray-500 border-2 rounded-e outline-none"
+                placeholder="Email"
+                style={{ width: "100%" }}
+              />
             </div>
-            <input
-              type="email"
-              name="cmail"
-              id="cmail"
-              className="h-10 p-4"
-              placeholder="Email"
-              style={{ width: "100%" }}
-            />
+
+            {errors.email && (
+              <small className="text-red-500">{errors.email.message}</small>
+            )}
           </div>
 
-          <div className="mb-7 flex items-start">
-            <div className="min-h-64 w-10 text-white bg-gray-500 flex justify-center items-center">
-              <IoMailSharp />
+          <div className={`${errors?.message?.message ? "mb-3" : "mb-7"}`}>
+            <div className="flex">
+              <div className="w-10 text-white bg-gray-500 flex justify-center items-center">
+                <IoMailSharp />
+              </div>
+              <textarea
+                name="message"
+                {...register("message", {
+                  required: { value: true, message: "Message is required!" },
+                })}
+                className="p-4 min-h-52 border-gray-500 border-2 rounded-e outline-none"
+                placeholder="Message"
+                style={{ width: "100%" }}
+              ></textarea>
             </div>
-            <textarea
-              name="message"
-              className="min-h-64 p-4 resize-none overflow-y-auto overflow-x-hidden"
-              placeholder="Message"
-              style={{ width: "100%" }}
-            ></textarea>
+
+            {errors.message && (
+              <small className="text-red-500">{errors.message.message}</small>
+            )}
           </div>
 
           <div>
             <input
               type="submit"
               value="SEND MESSAGE"
-              className="bg-blue-700 hover:bg-blue-600 hover:text-white hover:shadow-md rounded-sm py-3 px-5"
+              className="bg-blue-500 hover:bg-blue-600 text-white hover:shadow-md rounded-sm py-3 px-5"
             />
           </div>
         </form>

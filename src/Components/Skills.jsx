@@ -5,18 +5,18 @@ import {
   FaGitAlt,
   FaHtml5,
   FaJs,
+  FaNode,
   FaReact,
 } from "react-icons/fa";
-import { IoLogoFirebase } from "react-icons/io5";
 import { RiTailwindCssFill } from "react-icons/ri";
-import { SiFirebase, SiRedux } from "react-icons/si";
+import { SiRedux } from "react-icons/si";
 import { VscVscode } from "react-icons/vsc";
-import firebase from "../assets/firebase.svg";
+import { DiMongodb } from "react-icons/di";
 
 const Skills = () => {
   return (
     <section
-      className="min-h-screen pt-24 xl:px-24 flex flex-wrap flex-col justify-center"
+      className="min-h-screen pt-24  flex flex-wrap flex-col justify-center"
       id="skills"
     >
       <div className="text-center my-7">
@@ -62,12 +62,20 @@ const Skills = () => {
           <SiRedux className="mx-auto mb-2" style={{ color: "#7248B6" }} />
           <p className="text-base text-center">REDUX</p>
         </li>
-        <li>
+        {/* <li>
           <IoLogoFirebase
             className="mx-auto mb-2"
             style={{ color: "#FFC400" }}
           />
           <p className="text-base text-center">FIREBASE</p>
+        </li> */}
+        <li>
+          <FaNode className="mx-auto mb-2" style={{ color: "#7FC728" }} />
+          <p className="text-base text-center">Node.js</p>
+        </li>
+        <li>
+          <DiMongodb className="mx-auto mb-2" style={{ color: "#7FC728" }} />
+          <p className="text-base text-center">MongoDB</p>
         </li>
         <li>
           <FaGitAlt className="mx-auto mb-2" style={{ color: "#E84E31" }} />

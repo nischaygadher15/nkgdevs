@@ -18,13 +18,12 @@ function App() {
     // } else {
     //   setLoading(false);
     // }
-    setLoading(false);
   };
 
   useEffect(() => {
-    window.addEventListener("load", startLoading);
-
-    return () => window.removeEventListener("load", startLoading);
+    // window.addEventListener("load", startLoading);
+    // return () => window.removeEventListener("load", startLoading);
+    setLoading(false);
   }, []);
 
   return (

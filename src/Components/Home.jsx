@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { BsTwitterX } from "react-icons/bs";
 import {
   FaCircle,
@@ -7,11 +7,69 @@ import {
   FaLinkedinIn,
 } from "react-icons/fa";
 import { IoLocationOutline } from "react-icons/io5";
-import devPic from "../assets/nischay.jpg";
+import devPic1 from "../assets/nischay1.jpg";
+import devPic2 from "../assets/nischay2.jpg";
+import devPic3 from "../assets/nischay3.jpg";
+import devPic4 from "../assets/nischay4.jpg";
 import { FiGithub } from "react-icons/fi";
 import { ReactTyped } from "react-typed";
+import gsap from "gsap";
 
 const Home = () => {
+  let userPicSlidShow = () => {
+    let uss = gsap.timeline({ repeat: -1, repeatDelay: 5 });
+    uss.to(`#userPic1`, {
+      opacity: 0,
+      display: "none",
+      duration: 1,
+    });
+
+    uss.to(`#userPic2`, {
+      opacity: 1,
+      display: "block",
+      duration: 3,
+    });
+
+    uss.to(`#userPic2`, {
+      opacity: 0,
+      display: "none",
+      duration: 1,
+    });
+
+    uss.to(`#userPic3`, {
+      opacity: 1,
+      display: "block",
+      duration: 3,
+    });
+
+    uss.to(`#userPic3`, {
+      opacity: 0,
+      display: "none",
+      duration: 1,
+    });
+
+    uss.to(`#userPic4`, {
+      opacity: 1,
+      display: "block",
+      duration: 3,
+    });
+
+    uss.to(`#userPic4`, {
+      opacity: 0,
+      display: "none",
+      duration: 1,
+    });
+
+    uss.to(`#userPic1`, {
+      opacity: 1,
+      display: "block",
+      duration: 3,
+    });
+  };
+
+  useEffect(() => {
+    userPicSlidShow();
+  }, []);
   return (
     <section
       className="min-h-screen pt-24 flex flex-col sm:flex-row justify-center items-center"
@@ -20,12 +78,35 @@ const Home = () => {
       {/* <============== Image File ============> */}
       <div className="order-1 sm:order-2 w-full sm:w-2/5 flex flex-wrap justify-center items-center mb-10">
         <div className="relative px-4 sm:p-0 flex justify-center w-3/5 sm:w-4/5 ld:w-3/5 sm:h-3/5">
-          <img
-            src={devPic}
-            alt="Dev Pic"
-            id="userPic"
-            className="w-full sm:h-80"
-          />
+          <div className="relative w-full sm:h-80">
+            <img
+              src={devPic1}
+              alt="Dev Pic"
+              id="userPic1"
+              className="w-full h-full absolute top-0 left-0"
+            />
+
+            <img
+              src={devPic2}
+              alt="Dev Pic"
+              id="userPic2"
+              className="w-full h-full absolute top-0 left-0 opacity-0"
+            />
+
+            <img
+              src={devPic3}
+              alt="Dev Pic"
+              id="userPic3"
+              className="w-full h-full absolute top-0 left-0 opacity-0"
+            />
+
+            <img
+              src={devPic4}
+              alt="Dev Pic"
+              id="userPic4"
+              className="w-full h-full absolute top-0 left-0 opacity-0"
+            />
+          </div>
           <div className="absolute top-4 sm:left-4 w-full h-full bg-gray-400 -z-10"></div>
         </div>
       </div>

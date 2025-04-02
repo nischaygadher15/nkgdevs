@@ -7,6 +7,7 @@ import Education from "./Components/Education";
 import Projects from "./Components/Projects";
 import Contact from "./Components/Contact";
 import Loader from "./Components/Loader";
+import Experience from "./Components/Experience";
 
 function App() {
   let [loading, setLoading] = useState(true);
@@ -43,6 +44,7 @@ function App() {
           <main className="container px-6">
             <Home />
             <Skills />
+            <Experience />
             <Education />
             <Projects />
             <Contact />

@@ -52,42 +52,6 @@ const Experience = () => {
             Dec 2023 to Dec 2024
           </div>
         </li>
-
-        {/* Company 2 */}
-        <li className="flex flex-col md:flex-row items-start p-4 sm:p-7 bg-gray-100 rounded-md mb-12 shadow-md">
-          <div className="order-1 w-full mb-4 md:mb-0 md:w-1/3 pe-5">
-            <img
-              src={hdfc}
-              alt="HDFC Logo"
-              className="w-full sm:w-1/2 md:w-full h-16"
-            />
-          </div>
-          <div className="order-3 md:order-2 w-full mb-4 md:mb-0 md:w-1/2 sm:px-5">
-            <p className="font-bold text-xl mb-3">
-              Virtual Customer Care Officer
-            </p>
-            <ul className="list-disc ps-8">
-              <li className="mb-3">
-                <p>
-                  As a Virtual Customer Service Executive with HDFC Bank, I had
-                  successfully solved numerous customer queries related to
-                  banking products(Creadit Card, Accounts), ensuring support and
-                  efficient resolution.
-                </p>
-              </li>
-
-              <li className="mb-3">
-                <p>
-                  I am well-equipped to deliver value to any customer service
-                  role.
-                </p>
-              </li>
-            </ul>
-          </div>
-          <div className="order-2 md:order-3 w-full mb-4 md:mb-0 md:w-1/4 sm:px-5 text-left md:text-right text-lg">
-            Mar 2023 to Nov 2023
-          </div>
-        </li>
       </ul>
     </section>
   );

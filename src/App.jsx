@@ -3,7 +3,6 @@ import "./App.css";
 import Navbar from "./Components/Navbar";
 import Home from "./Components/Home";
 import Skills from "./Components/Skills";
-import Experience from "./Components/Experience";
 import Education from "./Components/Education";
 import Projects from "./Components/Projects";
 import Contact from "./Components/Contact";
@@ -12,16 +11,17 @@ import Loader from "./Components/Loader";
 function App() {
   let [loading, setLoading] = useState(true);
   let startLoadTime = Date.now();
+  let startLoading = () => {
+    // let difference = Date.now() - startLoadTime;
+    // if (difference < 1000) {
+    //   setTimeout(() => setLoading(false), parseInt(1000 - difference));
+    // } else {
+    //   setLoading(false);
+    // }
+    setLoading(false);
+  };
 
   useEffect(() => {
-    let startLoading = () => {
-      let difference = Date.now() - startLoadTime;
-      if (difference < 1000) {
-        setTimeout(() => setLoading(false), parseInt(1000 - difference));
-      } else {
-        setLoading(false);
-      }
-    };
     window.addEventListener("load", startLoading);
 
     return () => window.removeEventListener("load", startLoading);
@@ -49,8 +49,8 @@ function App() {
             <Contact />
           </main>
 
-          <footer className="container px-6 sm:p-0">
-            <div className="flex flex-col sm:flex-row justify-center text-center bg-gray-200 p-5 my-5">
+          <footer className="w-full px-6 sm:p-0">
+            <div className="flex flex-col sm:flex-row justify-center text-center bg-gray-200 p-5 mt-5">
               <p className="sm:border-r-2 sm:border-gray-900 px-2">
                 &copy; 2024
               </p>

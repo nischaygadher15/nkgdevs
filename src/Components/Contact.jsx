@@ -18,16 +18,22 @@ const Contact = () => {
     formState: { errors },
   } = useForm();
 
-  let sentForm = (data) => {
-    console.log(data);
+  let sentForm = async (data) => {
+    try {
+      if (data) {
+        // await fetch();
+      }
+    } catch (error) {
+      console.log(error.message);
+    }
   };
 
   return (
     <section
-      className="min-h-screen pt-24 xl:px-24 flex flex-wrap flex-col justify-start bg-white"
+      className="min-h-screen py-24 xl:px-24 flex justify-start bg-white"
       id="contact"
     >
-      <div className="flex flex-col md:flex-row gap-5 w-full p-6 shadow-md border-2 border-gray-500 border-gray rounded">
+      <div className="flex flex-col md:flex-row gap-5 w-full p-6 shadow-md border-2 border-gray-500 border-gray rounded-md">
         <div className="w-full md:w-2/5">
           {/* Intro Text */}
           <div className="text-center">
@@ -126,7 +132,7 @@ const Contact = () => {
                     message: "Name must be start with alphabet.",
                   },
                 })}
-                className="h-10 p-4 border-gray-500 border-2 rounded-e outline-none"
+                className="h-10 px-4 border-gray-500 border-2 rounded-e outline-none"
                 placeholder="Name"
                 style={{ width: "100%" }}
               />
@@ -151,7 +157,7 @@ const Contact = () => {
                     message: "Invalid email format!",
                   },
                 })}
-                className="h-10 p-4 border-gray-500 border-2 rounded-e outline-none"
+                className="h-10 px-4 border-gray-500 border-2 rounded-e outline-none"
                 placeholder="Email"
                 style={{ width: "100%" }}
               />

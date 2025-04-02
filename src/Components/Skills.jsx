@@ -71,11 +71,11 @@ const Skills = () => {
         </li> */}
         <li>
           <FaNode className="mx-auto mb-2" style={{ color: "#7FC728" }} />
-          <p className="text-base text-center">Node.js</p>
+          <p className="text-base text-center">NODE</p>
         </li>
         <li>
           <DiMongodb className="mx-auto mb-2" style={{ color: "#7FC728" }} />
-          <p className="text-base text-center">MongoDB</p>
+          <p className="text-base text-center">MONGO DB</p>
         </li>
         <li>
           <FaGitAlt className="mx-auto mb-2" style={{ color: "#E84E31" }} />

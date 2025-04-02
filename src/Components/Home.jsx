@@ -52,9 +52,8 @@ const Home = () => {
           >
             <input
               type="text"
-              className="outline-none max-w-full text-center sm:text-left p-1"
+              className="outline-none max-w-full text-center sm:text-left bg-white"
               disabled
-              // style={{ maxWidth: "350px" }}
             />
           </ReactTyped>
         </p>

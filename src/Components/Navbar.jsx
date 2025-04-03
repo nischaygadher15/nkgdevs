@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { FiSun } from "react-icons/fi";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { IoMdClose } from "react-icons/io";
+import resume from "../assets/MERN_Nkg_Resume.pdf";
 
 const Navbar = () => {
   let [menu, setMenu] = useState(false);
@@ -52,9 +53,14 @@ const Navbar = () => {
             <a href="#project">Projects</a>
             <a href="#contact">Contact</a>
             {/* <FiSun className="hidden md:block text-xl cursor-pointer" /> */}
-            <button className="w-1/2 md:w-auto bg-gray-900 text-white mx-auto md:mx-0 px-3 py-4 md:py-1 rounded-md">
+            <a
+              href={resume}
+              className="md:w-auto bg-gray-900 text-white p-2 md:py-1 rounded-lg"
+              target="_black"
+              download="NKGresume"
+            >
               Download CV
-            </button>
+            </a>
           </nav>
           <div className="md:hidden flex gap-4 text-xl">
             <FiSun className="cursor-pointer" />
@@ -85,6 +91,7 @@ const Navbar = () => {
             >
               Home
             </a>
+
             <a
               href="#skills"
               className="py-4 px-6 hover:bg-gray-400"
@@ -92,13 +99,15 @@ const Navbar = () => {
             >
               Skills
             </a>
-            {/* <a
+
+            <a
               href="#exps"
               className="py-4 px-6 hover:bg-gray-400"
               onClick={closeMenu}
             >
               Experience
-            </a> */}
+            </a>
+
             <a
               href="#edu"
               className="py-4 px-6 hover:bg-gray-400"
@@ -113,6 +122,7 @@ const Navbar = () => {
             >
               Projects
             </a>
+
             <a
               href="#contact"
               className="py-4 px-6 hover:bg-gray-400"
@@ -121,9 +131,14 @@ const Navbar = () => {
               Contact
             </a>
 
-            <button className="md:w-auto bg-gray-900 text-white p-2 md:py-1 mt-5 mx-6 rounded-lg">
+            <a
+              href={resume}
+              className="md:w-auto bg-gray-900 text-white p-2 md:py-1 mt-5 mx-6 rounded-lg"
+              target="_black"
+              download="NKGresume"
+            >
               Download CV
-            </button>
+            </a>
           </nav>
         </div>
       </div>

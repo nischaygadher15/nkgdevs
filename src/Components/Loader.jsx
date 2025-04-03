@@ -6,10 +6,10 @@ const Loader = (props) => {
   // #7DFF02
   return (
     <div className="absolute top-0 left-0 z-50 w-screen h-screen bg-white flex justify-center items-center">
-      <div className="flex flex-col justify-between items-center gap-7">
+      <div className="relative flex flex-col justify-between items-center gap-7">
         {/* Logo */}
-        <div className="text-5xl">
-          <p className="font-bold">{`< NKG/>`}</p>
+        <div className="absolute -top-[170%] text-5xl">
+          <p className="font-bold text-nowrap">{`< NKG/>`}</p>
         </div>
 
         {/* Loader */}

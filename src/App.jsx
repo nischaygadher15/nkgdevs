@@ -11,20 +11,9 @@ import Experience from "./Components/Experience";
 
 function App() {
   let [loading, setLoading] = useState(true);
-  let startLoadTime = Date.now();
-  let startLoading = () => {
-    // let difference = Date.now() - startLoadTime;
-    // if (difference < 1000) {
-    //   setTimeout(() => setLoading(false), parseInt(1000 - difference));
-    // } else {
-    //   setLoading(false);
-    // }
-  };
 
   useEffect(() => {
-    // window.addEventListener("load", startLoading);
-    // return () => window.removeEventListener("load", startLoading);
-    setLoading(false);
+    // setTimeout(() => setLoading(false), 1500);
   }, []);
 
   return (

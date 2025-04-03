@@ -14,62 +14,18 @@ import devPic4 from "../assets/nischay4.jpg";
 import { FiGithub } from "react-icons/fi";
 import { ReactTyped } from "react-typed";
 import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+
+gsap.registerPlugin(useGSAP);
 
 const Home = () => {
-  let userPicSlidShow = () => {
-    let uss = gsap.timeline({ repeat: -1, repeatDelay: 5 });
-    uss.to(`#userPic1`, {
-      opacity: 0,
-      display: "none",
-      duration: 1,
+  useGSAP(() => {
+    let ss = gsap.timeline({ repeat: -1 });
+    ss.to("#imgTrain", {
+      x: "-400%",
+      duration: 20,
     });
-
-    uss.to(`#userPic2`, {
-      opacity: 1,
-      display: "block",
-      duration: 3,
-    });
-
-    uss.to(`#userPic2`, {
-      opacity: 0,
-      display: "none",
-      duration: 1,
-    });
-
-    uss.to(`#userPic3`, {
-      opacity: 1,
-      display: "block",
-      duration: 3,
-    });
-
-    uss.to(`#userPic3`, {
-      opacity: 0,
-      display: "none",
-      duration: 1,
-    });
-
-    uss.to(`#userPic4`, {
-      opacity: 1,
-      display: "block",
-      duration: 3,
-    });
-
-    uss.to(`#userPic4`, {
-      opacity: 0,
-      display: "none",
-      duration: 1,
-    });
-
-    uss.to(`#userPic1`, {
-      opacity: 1,
-      display: "block",
-      duration: 3,
-    });
-  };
-
-  useEffect(() => {
-    userPicSlidShow();
-  }, []);
+  });
   return (
     <section
       className="min-h-screen pt-24 flex flex-col sm:flex-row justify-center items-center"
@@ -78,34 +34,50 @@ const Home = () => {
       {/* <============== Image File ============> */}
       <div className="order-1 sm:order-2 w-full sm:w-2/5 flex flex-wrap justify-center items-center mb-10">
         <div className="relative px-4 sm:p-0 flex justify-center w-3/5 sm:w-4/5 ld:w-3/5 sm:h-3/5">
-          <div className="relative w-full sm:h-80">
-            <img
-              src={devPic1}
-              alt="Dev Pic"
-              id="userPic1"
-              className="w-full h-full absolute top-0 left-0"
-            />
+          <div className="relative w-full sm:h-80 flex overflow-hidden">
+            <div id="imgTrain" className="flex flex-nowrap">
+              <img
+                src={devPic1}
+                alt="Dev Pic"
+                id="userPic1"
+                className="min-w-full h-full"
+              />
 
-            <img
-              src={devPic2}
-              alt="Dev Pic"
-              id="userPic2"
-              className="w-full h-full absolute top-0 left-0 opacity-0"
-            />
+              <img
+                src={devPic2}
+                alt="Dev Pic"
+                id="userPic2"
+                className="min-w-full h-full"
+              />
 
-            <img
-              src={devPic3}
-              alt="Dev Pic"
-              id="userPic3"
-              className="w-full h-full absolute top-0 left-0 opacity-0"
-            />
+              <img
+                src={devPic3}
+                alt="Dev Pic"
+                id="userPic3"
+                className="min-w-full h-full"
+              />
 
-            <img
-              src={devPic4}
-              alt="Dev Pic"
-              id="userPic4"
-              className="w-full h-full absolute top-0 left-0 opacity-0"
-            />
+              <img
+                src={devPic4}
+                alt="Dev Pic"
+                id="userPic4"
+                className="min-w-full h-full"
+              />
+
+              <img
+                src={devPic1}
+                alt="Dev Pic"
+                id="userPic1"
+                className="min-w-full h-full"
+              />
+
+              <img
+                src={devPic2}
+                alt="Dev Pic"
+                id="userPic2"
+                className="min-w-full h-full"
+              />
+            </div>
           </div>
           <div className="absolute top-4 sm:left-4 w-full h-full bg-gray-400 -z-10"></div>
         </div>

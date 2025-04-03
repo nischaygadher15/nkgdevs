@@ -8,7 +8,7 @@ const Loader = (props) => {
     <div className="absolute top-0 left-0 z-50 w-screen h-screen bg-white flex justify-center items-center">
       <div className="relative flex flex-col justify-between items-center gap-7">
         {/* Logo */}
-        <div className="absolute -top-[170%] text-5xl">
+        <div className="absolute top-0 -translate-y-[calc(100%+20px)] text-5xl">
           <p className="font-bold text-nowrap">{`< NKG/>`}</p>
         </div>
 

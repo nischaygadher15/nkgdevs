@@ -13,11 +13,7 @@ const Loader = (props) => {
         </div>
 
         {/* Loader */}
-        <img
-          src={loader}
-          alt="Loader GIF"
-          className="w-10 md:w-11 lg:w-14 xl:w-16"
-        />
+        <img src={loader} alt="Loader GIF" className="w-10 md:w-11 lg:w-12" />
       </div>
     </div>
   );

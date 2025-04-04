@@ -8,13 +8,25 @@ import Projects from "./Components/Projects";
 import Contact from "./Components/Contact";
 import Loader from "./Components/Loader";
 import Experience from "./Components/Experience";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 
 function App() {
   let [loading, setLoading] = useState(true);
 
   useEffect(() => {
     setTimeout(() => setLoading(false), 1500);
+
+    let pointer = document.querySelector("#pointer");
   }, []);
+
+  let chasePointer = (posx, posy) => {
+    gsap.to("#pointer", {
+      x: posx,
+      y: posy,
+      duration: 1,
+    });
+  };
 
   return (
     <>
@@ -25,7 +37,16 @@ function App() {
           className={`max-w-screen h-auto relative flex flex-col items-center ${
             loading ? "overflow-hidden" : "overflow-x-hidden"
           }`}
+          id="mainBody"
+          onMouseMove={(e) => {
+            chasePointer(e.clientX - 10, e.clientY - 5);
+            console.log(e.clientX, e.clientY);
+          }}
         >
+          <div
+            id="pointer"
+            className="absolute top-0 left-0 w-5 h-5 bg-[#36B7F0] z-50 rounded-full"
+          ></div>
           <header className="w-full bg-white fixed z-30 flex justify-center shadow-md">
             <Navbar />
           </header>

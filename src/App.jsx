@@ -28,6 +28,22 @@ function App() {
     });
   };
 
+  let hidePointer = () => {
+    gsap.to("#pointer", {
+      scale: 0,
+      display: "none",
+      duration: 1,
+    });
+  };
+
+  let showPointer = () => {
+    gsap.to("#pointer", {
+      display: "block",
+      scale: 1,
+      duration: 1,
+    });
+  };
+
   return (
     <>
       {loading ? (
@@ -39,13 +55,14 @@ function App() {
           }`}
           id="mainBody"
           onMouseMove={(e) => {
-            chasePointer(e.clientX - 10, e.clientY - 5);
-            console.log(e.clientX, e.clientY);
+            chasePointer(e.clientX + 3, e.clientY + 15);
           }}
+          onMouseLeave={() => hidePointer()}
+          onMouseEnter={() => showPointer()}
         >
           <div
             id="pointer"
-            className="absolute top-0 left-0 w-5 h-5 bg-[#36B7F0] z-50 rounded-full"
+            className="fixed top-0 left-0 w-5 h-5 bg-[#36B7F0] z-50 rounded-full"
           ></div>
           <header className="w-full bg-white fixed z-30 flex justify-center shadow-md">
             <Navbar />

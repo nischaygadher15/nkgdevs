@@ -7,6 +7,9 @@ import resume from "../assets/MERN_Nkg_Resume.pdf";
 const Navbar = () => {
   let [menu, setMenu] = useState(false);
 
+  let navLinkStyle =
+    "px-2 py-1 rounded-md hover:text-[#70E40B] hover:bg-[#eff0f0]";
+
   let handleMenu = (menuStatus) => {
     let navDrawer = document.getElementById("navDrawer");
     if (navDrawer != null) {
@@ -38,7 +41,7 @@ const Navbar = () => {
       >
         {/* Logo */}
         <div className="text-2xl">
-          <p className="font-bold">{`<NKG />`}</p>
+          <p className="font-bold text-[#70E40B]">{`<NKG />`}</p>
         </div>
 
         {/* Nav Links */}
@@ -46,12 +49,24 @@ const Navbar = () => {
           <nav
             className={`p-6 md:p-0 hidden md:flex flex-col md:flex-row items-start flex-wrap md:items-center gap-4 lg:gap-6 text-xl md:text-base`}
           >
-            <a href="#home">Home</a>
-            <a href="#skills">Skills</a>
-            {/* <a href="#exps">Experience</a> */}
-            <a href="#edu">Education</a>
-            <a href="#project">Projects</a>
-            <a href="#contact">Contact</a>
+            <a href="#home" className={`${navLinkStyle}`}>
+              Home
+            </a>
+            <a href="#skills" className={`${navLinkStyle}`}>
+              Skills
+            </a>
+            <a href="#exps" className={`${navLinkStyle}`}>
+              Experience
+            </a>
+            <a href="#edu" className={`${navLinkStyle}`}>
+              Education
+            </a>
+            <a href="#project" className={`${navLinkStyle}`}>
+              Projects
+            </a>
+            <a href="#contact" className={`${navLinkStyle}`}>
+              Contact
+            </a>
             {/* <FiSun className="hidden md:block text-xl cursor-pointer" /> */}
             <a
               href={resume}

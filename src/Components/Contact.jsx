@@ -37,7 +37,7 @@ const Contact = () => {
         <div className="w-full md:w-2/5">
           {/* Intro Text */}
           <div className="text-center">
-            <p className="inline text-2xl px-3 py-1 rounded-s-full rounded-e-full bg-slate-500">
+            <p className="inline text-2xl text-white bg-blue-700 px-3 py-1 rounded-s-full rounded-e-full">
               Contact
             </p>
             <p className="mt-4 text-left">
@@ -116,7 +116,7 @@ const Contact = () => {
         <form className="w-full md:w-3/5" onSubmit={handleSubmit(sentForm)}>
           <div className={`${errors?.name?.message ? "mb-3" : "mb-7"}`}>
             <div className="flex items-center">
-              <div className="h-10 w-10 text-white bg-gray-500 flex justify-center items-center">
+              <div className="h-10 w-10 text-white bg-blue-700 flex justify-center items-center">
                 <FaUserAlt />
               </div>
               <input
@@ -132,7 +132,7 @@ const Contact = () => {
                     message: "Name must be start with alphabet.",
                   },
                 })}
-                className="h-10 px-4 border-gray-500 border-2 rounded-e outline-none"
+                className="h-10 px-4 border-blue-700 border-2 rounded-e outline-none"
                 placeholder="Name"
                 style={{ width: "100%" }}
               />
@@ -145,7 +145,7 @@ const Contact = () => {
 
           <div className={`${errors?.email?.message ? "mb-3" : "mb-7"}`}>
             <div className="flex items-center">
-              <div className="h-10 w-10 text-white bg-gray-500 flex justify-center items-center">
+              <div className="h-10 w-10 text-white bg-blue-700 flex justify-center items-center">
                 <MdAlternateEmail />
               </div>
               <input
@@ -157,7 +157,7 @@ const Contact = () => {
                     message: "Invalid email format!",
                   },
                 })}
-                className="h-10 px-4 border-gray-500 border-2 rounded-e outline-none"
+                className="h-10 px-4 border-blue-700 border-2 rounded-e outline-none"
                 placeholder="Email"
                 style={{ width: "100%" }}
               />
@@ -170,7 +170,7 @@ const Contact = () => {
 
           <div className={`${errors?.message?.message ? "mb-3" : "mb-7"}`}>
             <div className="flex">
-              <div className="w-10 text-white bg-gray-500 flex justify-center items-center">
+              <div className="w-10 text-white bg-blue-700 flex justify-center items-center">
                 <IoMailSharp />
               </div>
               <textarea
@@ -178,7 +178,7 @@ const Contact = () => {
                 {...register("message", {
                   required: { value: true, message: "Message is required!" },
                 })}
-                className="p-4 min-h-52 border-gray-500 border-2 rounded-e outline-none"
+                className="p-4 min-h-52 border-blue-700 border-2 rounded-e outline-none"
                 placeholder="Message"
                 style={{ width: "100%" }}
               ></textarea>
@@ -193,7 +193,7 @@ const Contact = () => {
             <input
               type="submit"
               value="SEND MESSAGE"
-              className="bg-blue-500 hover:bg-blue-600 text-white hover:shadow-md rounded-sm py-3 px-5"
+              className="text-white bg-blue-700 hover:bg-blue-700 hover:shadow-md rounded-sm py-3 px-5"
             />
           </div>
         </form>

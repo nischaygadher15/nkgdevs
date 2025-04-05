@@ -8,7 +8,6 @@ import Projects from "./Components/Projects";
 import Contact from "./Components/Contact";
 import Loader from "./Components/Loader";
 import Experience from "./Components/Experience";
-import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 
 function App() {
@@ -16,7 +15,9 @@ function App() {
   let [pointerTimer, setPointerTime] = useState(5);
   let [pointerTStatus, setPointerTStatus] = useState(false);
   let pointerTimer1;
+  // let [scrollPercent, setScrollPercent] = useState(1);
 
+  // <========= Chasing pointer Animation ==========>
   let counting = async () => {
     let time = pointerTimer;
     while (time >= 0) {
@@ -48,7 +49,7 @@ function App() {
     gsap.to("#pointer", {
       x: posx,
       y: posy,
-      duration: 1,
+      duration: 2,
     });
   };
 
@@ -75,14 +76,29 @@ function App() {
     }
   };
 
+  useEffect(() => {
+    setTimeout(() => handlePointerText(false), 2500);
+  }, []);
+
   let showPointer = () => {
     gsap.to("#pointer", {
       display: "block",
       scale: 1,
     });
-    handlePointerText(true);
-    setTimeout(() => handlePointerText(false), 1000);
   };
+
+  // <========== Scroll Progress Bar  ===========>
+  useEffect(() => {
+    window.addEventListener("scroll", (e) => {
+      let tdh = document.documentElement.scrollHeight; //Total Document Height
+      let ch = document.documentElement.clientHeight; //Total Document Height
+      let pyo = scrollY; //Total Document Height
+      let scrollPercent = parseFloat(((pyo / (tdh - ch)) * 100).toFixed(2));
+      gsap.to("#scrollProgress", {
+        width: `${scrollPercent}%`,
+      });
+    });
+  }, []);
 
   return (
     <>
@@ -113,12 +129,18 @@ function App() {
               src="https://www.animatedimages.org/data/media/669/animated-jumping-smiley-image-0107.gif"
               border="0"
               alt="animated-jumping-smiley-image-0107"
-              className="bg-transparent"
+              className="w-12 h-12 sm:w-7 sm:h-7"
             />
           </div>
 
-          <header className="w-full bg-white fixed z-30 flex justify-center shadow-md">
+          <header className="w-full bg-white fixed z-30 flex flex-col items-center shadow-md">
             <Navbar />
+            <div className="w-full h-1 bg-white" id="scrollProgressTrack">
+              <div
+                className="w-0 h-full bg-[#70E40B] z-50"
+                id="scrollProgress"
+              ></div>
+            </div>
           </header>
 
           <main className="container px-6">

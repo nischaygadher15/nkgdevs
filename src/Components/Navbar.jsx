@@ -32,18 +32,16 @@ const Navbar = () => {
   return (
     <div className="container max-h-16">
       {/* Navbar */}
-      <nav
-        className={`px-6 h-16  bg-white flex flex-wrap justify-between items-center`}
-      >
+      <nav className={`px-6 h-16 bg-white flex justify-between items-center`}>
         {/* Logo */}
         <div className="text-2xl">
-          <p className="font-bold text-[#70E40B]">{`<NKG />`}</p>
+          <p className="font-bold text-[#70E40B] text-nowrap">{`<NKG />`}</p>
         </div>
 
         {/* Nav Links */}
-        <div className="flex flex-wrap justify-evenly items-center  text-base">
+        <div className="flex flex-wrap justify-evenly items-center text-base">
           <nav
-            className={`p-6 md:p-0 hidden md:flex flex-col md:flex-row items-start flex-wrap md:items-center gap-4 lg:gap-6 text-xl md:text-base`}
+            className={`p-6 md:p-0 hidden lg:flex flex-col md:flex-row items-start md:items-center gap-4 text-xl md:text-base`}
           >
             <a href="#home" className={`${navLinkStyle}`}>
               Home
@@ -73,7 +71,7 @@ const Navbar = () => {
               Download CV
             </a>
           </nav>
-          <div className="md:hidden flex gap-4 text-xl">
+          <div className="lg:hidden flex gap-4 text-xl">
             <FiSun className="cursor-pointer" />
             {menu ? (
               <IoMdClose
@@ -92,12 +90,12 @@ const Navbar = () => {
 
       {/*<================================== Drawer =======================================>*/}
 
-      <div id="navDrawer" className="bg-white">
+      <div id="navDrawer" className="absolute top-16 left-0 bg-white w-full">
         <div id="navDrawerContent">
-          <nav className="py-6 flex flex-wrap flex-col">
+          <nav className="py-6 flex flex-wrap flex-col items-center">
             <a
               href="#home"
-              className="py-4 px-6 hover:bg-gray-400"
+              className="py-4 px-6 hover:bg-gray-400 text-xl font-base"
               onClick={closeMenu}
             >
               Home
@@ -105,7 +103,7 @@ const Navbar = () => {
 
             <a
               href="#skills"
-              className="py-4 px-6 hover:bg-gray-400"
+              className="py-4 px-6 hover:bg-gray-400 text-xl font-base"
               onClick={closeMenu}
             >
               Skills
@@ -113,7 +111,7 @@ const Navbar = () => {
 
             <a
               href="#exps"
-              className="py-4 px-6 hover:bg-gray-400"
+              className="py-4 px-6 hover:bg-gray-400 text-xl font-base"
               onClick={closeMenu}
             >
               Experience
@@ -121,14 +119,14 @@ const Navbar = () => {
 
             <a
               href="#edu"
-              className="py-4 px-6 hover:bg-gray-400"
+              className="py-4 px-6 hover:bg-gray-400 text-xl font-base"
               onClick={closeMenu}
             >
               Education
             </a>
             <a
               href="#project"
-              className="py-4 px-6 hover:bg-gray-400"
+              className="py-4 px-6 hover:bg-gray-400 text-xl font-base"
               onClick={closeMenu}
             >
               Projects
@@ -136,7 +134,7 @@ const Navbar = () => {
 
             <a
               href="#contact"
-              className="py-4 px-6 hover:bg-gray-400"
+              className="py-4 px-6 hover:bg-gray-400 text-xl font-base"
               onClick={closeMenu}
             >
               Contact
@@ -144,7 +142,7 @@ const Navbar = () => {
 
             <a
               href={resume}
-              className="md:w-auto bg-gray-900 text-white p-2 md:py-1 mt-5 mx-6 rounded-lg"
+              className="md:w-auto bg-gray-900 text-white p-3 md:py-2 mt-5 mx-6 rounded-lg"
               target="_black"
               download="NKGresume"
             >

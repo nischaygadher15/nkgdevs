@@ -29,10 +29,6 @@ const Navbar = () => {
 
   let closeMenu = () => setMenu(false);
 
-  useState(() => {
-    console.log(`menu Status: ${menu}`);
-  });
-
   return (
     <div className="container max-h-16">
       {/* Navbar */}

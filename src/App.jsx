@@ -20,6 +20,7 @@ function App() {
   let counting = async () => {
     let time = pointerTimer;
     while (time >= 0) {
+      if (time == 1) handlePointerText(false);
       await new Promise((resolve) => {
         clearTimeout(pointerTimer1);
         pointerTimer1 = setTimeout(() => {
@@ -55,16 +56,32 @@ function App() {
     gsap.to("#pointer", {
       scale: 0,
       display: "none",
-      duration: 1,
     });
+  };
+
+  let handlePointerText = (status) => {
+    if (status) {
+      // Show text
+      gsap.to("#pointerText", {
+        scale: 1,
+        opacity: 1,
+      });
+    } else {
+      // hide Text
+      gsap.to("#pointerText", {
+        scale: 0,
+        opacity: 0,
+      });
+    }
   };
 
   let showPointer = () => {
     gsap.to("#pointer", {
       display: "block",
       scale: 1,
-      // duration: 1,
     });
+    handlePointerText(true);
+    setTimeout(() => handlePointerText(false), 1000);
   };
 
   return (
@@ -78,59 +95,27 @@ function App() {
           }`}
           id="mainBody"
           onMouseMove={(e) => {
-            chasePointer(e.clientX + 3, e.clientY + 15);
+            chasePointer(e.clientX, e.clientY);
             setPointerTStatus(true);
-            if (pointerTStatus) {
-              clearTimeout(pointerTimer1);
-              counting();
-            }
+            if (pointerTStatus) counting();
             showPointer();
           }}
           onMouseLeave={() => hidePointer()}
-          onMouseEnter={() => showPointer()}
         >
           {/* <============ Pointer ==========> */}
-          {/* simple Dot */}
-          {/* <div id="pointer" className="fixed top-0 left-0 w-5 h-5 bg-[#36B7F0] z-50 rounded-full"></div> */}
-
-          {/* Jumping Smily */}
-          {/* <a
-                  id="pointer"
-                  className="fixed top-0 left-0 z-50"
-                  href="https://www.animatedimages.org/cat-jumping-smileys-and-smilies-669.htm"
-                >
-                  <img
-                    src="https://www.animatedimages.org/data/media/669/animated-jumping-smiley-image-0109.gif"
-                    border="0"
-                    alt="animated-jumping-smiley-image-0109"
-                  />
-                </a> */}
-
-          {/* Red Jumping Smiley */}
-          {/* <a
-                  id="pointer"
-                  className="fixed top-0 left-0 z-50"
-                  href="https://www.animatedimages.org/cat-jumping-smileys-and-smilies-669.htm"
-                >
-                  <img
-                    src="https://www.animatedimages.org/data/media/669/animated-jumping-smiley-image-0040.gif"
-                    border="0"
-                    alt="animated-jumping-smiley-image-0040"
-                  />
-                </a> */}
 
           {/* Mute Jumping Smily */}
-          <a
-            id="pointer"
-            className="fixed top-0 left-0 z-50"
-            href="https://www.animatedimages.org/cat-jumping-smileys-and-smilies-669.htm"
-          >
+          <div id="pointer" className="fixed top-0 left-2 z-50 bg-transparent">
+            <small className="text-[10px] text-black" id="pointerText">
+              I will follow you.
+            </small>
             <img
               src="https://www.animatedimages.org/data/media/669/animated-jumping-smiley-image-0107.gif"
               border="0"
               alt="animated-jumping-smiley-image-0107"
+              className="bg-transparent"
             />
-          </a>
+          </div>
 
           <header className="w-full bg-white fixed z-30 flex justify-center shadow-md">
             <Navbar />

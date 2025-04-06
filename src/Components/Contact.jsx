@@ -47,7 +47,7 @@ const Contact = ({ props }) => {
           // Toast Message
           if (response.status) {
             reset();
-            console.log(JSON.stringify(response));
+            // console.log(JSON.stringify(response));
             toast.success("E-Mail sent successfully");
           } else {
             toast.success("E-Mail sent successfully");

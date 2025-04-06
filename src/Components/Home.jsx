@@ -19,6 +19,7 @@ import { useGSAP } from "@gsap/react";
 gsap.registerPlugin(useGSAP);
 
 const Home = () => {
+  // Image Carousal
   useGSAP(() => {
     let ss = gsap.timeline({ repeat: -1 });
     ss.to("#imgTrain", {
@@ -34,7 +35,10 @@ const Home = () => {
       {/* <============== Image File ============> */}
       <div className="order-1 sm:order-2 w-full sm:w-2/5 flex flex-wrap justify-center items-center mb-10">
         <div className="relative px-4 sm:p-0 flex justify-center w-3/5 sm:w-4/5 ld:w-3/5 sm:h-3/5">
-          <div className="relative w-full sm:h-80 flex overflow-hidden">
+          <div
+            className="relative w-full sm:h-80 flex overflow-hidden z-10 border-4 border-gray-800
+           dark:border-transparent"
+          >
             <div id="imgTrain" className="flex flex-nowrap">
               <img
                 src={devPic1}
@@ -79,18 +83,19 @@ const Home = () => {
               />
             </div>
           </div>
-          <div className="absolute top-4 sm:left-4 w-full h-full bg-gray-400 -z-10"></div>
+          <div className="absolute top-4 sm:left-4 w-full h-full bg-gray-300 dark:bg-gray-400 z-0"></div>
         </div>
       </div>
 
       {/* <============== Introduction Text ============> */}
       <div className="order-2 sm:order-1 w-full sm:w-3/5 overflow-hidden flex flex-col flex-wrap justify-center">
+        {/* Typing Animation text */}
         <p
           className="max-w-full flex flex-col lg:flex-row text-2xl sm:text-3xl md:text-4xl font-bold mb-3"
           id="typedAnimation"
         >
-          <span className="text-nowrap text-center sm:text-left">
-            &#128591; Hi,&nbsp;
+          <span className="py-1 text-nowrap text-center sm:text-left">
+            &#128591; नमस्ते,&nbsp;
           </span>
           <ReactTyped
             strings={[
@@ -105,11 +110,13 @@ const Home = () => {
           >
             <input
               type="text"
-              className="outline-none max-w-full text-center sm:text-left bg-white"
+              className="py-1 overflow-visible outline-none max-w-full text-center sm:text-left bg-white dark:bg-black"
               disabled
             />
           </ReactTyped>
         </p>
+
+        {/* Introduction */}
         <p className="text-wrap">
           I am a passionate React Developer with expertise in crafting dynamic,
           scalable, and user-centric web applications. I specialize in both
@@ -128,8 +135,10 @@ const Home = () => {
             <span>Available for new projects</span>
           </li>
         </ul>
+
+        {/* Social Media Icons */}
         <ul className="flex justify-evenly sm:justify-start sm:gap-10 text-2xl sm:text-xl">
-          <li className="p-1 hover:bg-black hover:text-white hover:rounded-md hover:shadow-md">
+          <li className="p-1 hover:bg-black hover:dark:bg-white hover:text-white hover:dark:text-black hover:rounded-md hover:shadow-md">
             <a href="https://github.com/nischaygadher15">
               <FiGithub />
             </a>
@@ -139,7 +148,7 @@ const Home = () => {
               <FaLinkedinIn />
             </a>
           </li>
-          <li className="p-1 hover:bg-black hover:text-white hover:rounded-md hover:shadow-md">
+          <li className="p-1 hover:bg-black hover:dark:bg-white hover:text-white hover:dark:text-black hover:rounded-md hover:shadow-md">
             <a href="https://x.com/NGadher15">
               <BsTwitterX />
             </a>

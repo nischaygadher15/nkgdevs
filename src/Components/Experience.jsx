@@ -4,11 +4,11 @@ import fps from "../assets/fpsmedia.png";
 const Experience = () => {
   return (
     <section
-      className="min-h-screen pt-24 flex flex-wrap flex-col justify-center bg-white"
+      className="min-h-screen pt-24 flex flex-wrap flex-col justify-center bg-white dark:bg-black"
       id="exps"
     >
       <div className="text-center my-7">
-        <p className="inline text-2xl px-3 py-1 rounded-s-full rounded-e-full bg-slate-300">
+        <p className="inline text-2xl px-3 py-1 rounded-s-full rounded-e-full bg-slate-300 dark:bg-white dark:text-black">
           Experience
         </p>
         <p className="mt-4 text-base">
@@ -19,7 +19,10 @@ const Experience = () => {
       {/* List of Companies */}
       <ul className="xl:px-24">
         {/* Company 1 */}
-        <li className="flex flex-col md:flex-row items-start p-4 sm:p-7 bg-gray-100 rounded-md mb-12 shadow-md">
+        <li
+          className="flex flex-col md:flex-row items-start p-4 sm:p-7 bg-gray-100 dark:bg-black  dark:text-white 
+        border-2 border-gray-100 dark:border-white rounded-md mb-12 shadow-md"
+        >
           <div className="order-1 w-full mb-4 md:mb-0 md:w-1/3 sm:pe-5">
             <img
               src={fps}

@@ -10,11 +10,11 @@ import portfolio from "../assets/portfolio.png";
 const Projects = () => {
   return (
     <section
-      className="min-h-screen pt-24 lg:px-24 flex flex-wrap flex-col justify-center"
+      className="min-h-screen pt-24 flex flex-wrap flex-col justify-center"
       id="project"
     >
       <div className="text-center my-7">
-        <p className="inline text-2xl px-3 py-1 rounded-s-full rounded-e-full bg-slate-300">
+        <p className="inline text-2xl px-3 py-1 rounded-s-full rounded-e-full bg-slate-300 dark:bg-white dark:text-black">
           Projects
         </p>
         <p className="mt-4 text-base">
@@ -25,9 +25,13 @@ const Projects = () => {
       {/* List of Projects */}
       <ul>
         {/* Project 1 */}
-        <li className="flex flex-col md:flex-row items-start p-4 sm:p-7 bg-gray-100 rounded-md mb-12 shadow-md">
+        <li className="flex flex-col md:flex-row items-start p-4 sm:p-7 bg-gray-100 dark:bg-black border-2 border-gray-100 rounded-md mb-12 shadow-md">
           <div className="order-1 w-full mb-4 md:mb-0 md:w-1/2 sm:pe-5">
-            <img src={emart} alt="Asstron Logo" className="w-full max-h-96" />
+            <img
+              src={emart}
+              alt="Asstron Logo"
+              className="w-full max-h-96 rounded-md"
+            />
           </div>
           <div className="order-2 w-full mb-4 md:mb-0 md:w-1/2 sm:px-5">
             <p className="font-bold text-xl mb-3">Electronic Mart</p>
@@ -38,22 +42,22 @@ const Projects = () => {
               ad ut quisquam laborum perferendis.
             </p>
             <ul className="flex flex-wrap gap-2 my-5">
-              <li className="inline text-md px-3 py-1 rounded-lg bg-slate-300">
+              <li className="inline text-md px-3 py-1 rounded-lg bg-slate-300 border-slate-300 dark:bg-black border-2 dark:border-white">
                 React
               </li>
-              <li className="inline text-md px-3 py-1 rounded-lg bg-slate-300">
+              <li className="inline text-md px-3 py-1 rounded-lg bg-slate-300 border-slate-300 dark:bg-black border-2 dark:border-white">
                 Node
               </li>
-              <li className="inline text-md px-3 py-1 rounded-lg bg-slate-300">
+              <li className="inline text-md px-3 py-1 rounded-lg bg-slate-300 border-slate-300 dark:bg-black border-2 dark:border-white">
                 Express
               </li>
-              <li className="inline text-md px-3 py-1 rounded-lg bg-slate-300">
+              <li className="inline text-md px-3 py-1 rounded-lg bg-slate-300 border-slate-300 dark:bg-black border-2 dark:border-white">
                 MongoDB
               </li>
-              <li className="inline text-md px-3 py-1 rounded-lg bg-slate-300">
+              <li className="inline text-md px-3 py-1 rounded-lg bg-slate-300 border-slate-300 dark:bg-black border-2 dark:border-white">
                 Redux
               </li>
-              <li className="inline text-md px-3 py-1 rounded-lg bg-slate-300">
+              <li className="inline text-md px-3 py-1 rounded-lg bg-slate-300 border-slate-300 dark:bg-black border-2 dark:border-white">
                 Tailwind Css
               </li>
             </ul>
@@ -71,12 +75,12 @@ const Projects = () => {
         </li>
 
         {/* PORTFOLIO */}
-        <li className="flex flex-col md:flex-row items-start p-4 sm:p-7 bg-gray-100 rounded-md mb-12 shadow-md">
+        <li className="flex flex-col md:flex-row items-start p-4 sm:p-7 bg-gray-100 dark:bg-black border-2 border-gray-100 rounded-md mb-12 shadow-md">
           <div className="order-1 w-full mb-4 md:mb-0 md:w-1/2 sm:pe-5">
             <img
               src={portfolio}
               alt="Asstron Logo"
-              className="w-full max-h-96"
+              className="w-full max-h-96 rounded-md"
             />
           </div>
           <div className="order-2 w-full mb-4 md:mb-0 md:w-1/2 sm:px-5">
@@ -88,10 +92,10 @@ const Projects = () => {
               ad ut quisquam laborum perferendis.
             </p>
             <ul className="flex flex-wrap gap-2 my-5">
-              <li className="inline text-md px-3 py-1 rounded-lg bg-slate-300">
+              <li className="inline text-md px-3 py-1 rounded-lg bg-slate-300 border-slate-300 dark:bg-black border-2 dark:border-white">
                 React
               </li>
-              <li className="inline text-md px-3 py-1 rounded-lg bg-slate-300">
+              <li className="inline text-md px-3 py-1 rounded-lg bg-slate-300 border-slate-300 dark:bg-black border-2 dark:border-white">
                 Tailwind Css
               </li>
             </ul>

@@ -4,7 +4,7 @@ import { RxHamburgerMenu } from "react-icons/rx";
 import { IoMdClose } from "react-icons/io";
 import resume from "../assets/MERN_Nkg_Resume.pdf";
 
-const Navbar = () => {
+const Navbar = ({ data }) => {
   let [menu, setMenu] = useState(false);
 
   let navLinkStyle =
@@ -32,7 +32,9 @@ const Navbar = () => {
   return (
     <div className="container max-h-16">
       {/* Navbar */}
-      <nav className={`px-6 h-16 bg-white flex justify-between items-center`}>
+      <nav
+        className={`px-6 h-16 bg-white dark:bg-black flex justify-between items-center`}
+      >
         {/* Logo */}
         <div className="text-2xl">
           <p className="font-bold text-[#70E40B] text-nowrap">{`<NKG />`}</p>
@@ -41,7 +43,7 @@ const Navbar = () => {
         {/* Nav Links */}
         <div className="flex flex-wrap justify-evenly items-center text-base">
           <nav
-            className={`p-6 md:p-0 hidden lg:flex flex-col md:flex-row items-start md:items-center gap-4 text-xl md:text-base`}
+            className={`p-6 md:p-0 hidden lg:flex flex-col md:flex-row items-start md:items-center gap-4 text-xl dark:text-white  md:text-base`}
           >
             <a href="#home" className={`${navLinkStyle}`}>
               Home
@@ -64,26 +66,34 @@ const Navbar = () => {
             {/* <FiSun className="hidden md:block text-xl cursor-pointer" /> */}
             <a
               href={resume}
-              className="md:w-auto bg-gray-900 text-white p-2 md:py-1 rounded-lg"
+              className="md:w-auto bg-gray-900 dark:bg-white dark:hover:bg-[#70E40B] dark:hover:text-white text-white dark:text-black p-2 md:py-1 rounded-lg"
               target="_black"
               download="NKGresume"
             >
               Download CV
             </a>
           </nav>
-          <div className="lg:hidden flex gap-4 text-xl">
-            <FiSun className="cursor-pointer" />
-            {menu ? (
-              <IoMdClose
-                className="cursor-pointer"
-                onClick={() => setMenu(!menu)}
-              />
-            ) : (
-              <RxHamburgerMenu
-                className="cursor-pointer"
-                onClick={() => setMenu(!menu)}
-              />
-            )}
+          <div className="flex gap-3 text-xl">
+            <button
+              type="button"
+              className="p-2 ms-4 dark:text-white outline-none"
+              onClick={() => {
+                data.setDarkTheme(!data.darkTheme);
+              }}
+            >
+              <FiSun className="cursor-pointer" />
+            </button>
+
+            <button
+              className="p-2 lg:hidden outline-none"
+              onClick={() => setMenu(!menu)}
+            >
+              {menu ? (
+                <IoMdClose className="cursor-pointer" />
+              ) : (
+                <RxHamburgerMenu className="cursor-pointer" />
+              )}
+            </button>
           </div>
         </div>
       </nav>

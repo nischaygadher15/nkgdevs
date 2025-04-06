@@ -20,7 +20,7 @@ const Skills = () => {
       id="skills"
     >
       <div className="text-center my-7">
-        <p className="inline text-2xl px-3 py-1 rounded-s-full rounded-e-full bg-slate-300">
+        <p className="inline text-2xl px-3 py-1 rounded-s-full rounded-e-full bg-slate-300 dark:bg-white dark:text-black">
           Skills
         </p>
         <p className="mt-4 text-base">
@@ -62,13 +62,6 @@ const Skills = () => {
           <SiRedux className="mx-auto mb-2" style={{ color: "#7248B6" }} />
           <p className="text-base text-center">REDUX</p>
         </li>
-        {/* <li>
-          <IoLogoFirebase
-            className="mx-auto mb-2"
-            style={{ color: "#FFC400" }}
-          />
-          <p className="text-base text-center">FIREBASE</p>
-        </li> */}
         <li>
           <FaNode className="mx-auto mb-2" style={{ color: "#7FC728" }} />
           <p className="text-base text-center">NODE</p>

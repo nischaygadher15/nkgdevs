@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { BsTwitterX } from "react-icons/bs";
 import {
@@ -10,30 +10,59 @@ import {
 import { FiGithub } from "react-icons/fi";
 import { IoCallSharp, IoLocationSharp, IoMailSharp } from "react-icons/io5";
 import { MdAlternateEmail } from "react-icons/md";
+import { toast } from "react-toastify";
 
-const Contact = () => {
+const Contact = ({ func }) => {
+  let formSendig;
+
   let {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
 
-  let sentForm = async (data) => {
+  let sentForm = async (dt) => {
+    // Cleaning Timeout
+    clearTimeout(formSendig);
+
+    // Start Loadning
+    func.setLoading(true);
+
+    // API to Backend for Mail
     try {
-      if (data) {
-        // await fetch();
+      if (dt) {
+        let res = await fetch("http://localhost:3000/getemail", {
+          method: "POST",
+          headers: { "Content-Type": "application/json; charset=utf-8" },
+          body: JSON.stringify(dt),
+        });
+
+        let response = await res.json();
+
+        formSendig = setTimeout(() => {
+          // Stoping Leadind
+          func.setLoading(false);
+
+          // Toast Message
+          if (response.status) {
+            toast.success("E-Mail sent successfully");
+          } else {
+            toast.success("E-Mail sent successfully");
+          }
+        }, 1000);
       }
     } catch (error) {
+      formSendig = setTimeout(() => func.setLoading(false), 1000);
       console.log(error.message);
     }
   };
 
   return (
     <section
-      className="min-h-screen py-24 xl:px-24 flex justify-start bg-white"
+      className="min-h-screen py-24 xl:px-24 flex justify-start bg-white dark:bg-black"
       id="contact"
     >
-      <div className="flex flex-col md:flex-row gap-5 w-full p-6 shadow-md border-2 border-gray-500 border-gray rounded-md">
+      <div className="flex flex-col md:flex-row gap-5 w-full p-5 sm:p-6 shadow-md border-2 border-gray-500 dark:border-white border-gray rounded-md">
         <div className="w-full md:w-2/5">
           {/* Intro Text */}
           <div className="text-center">
@@ -46,6 +75,7 @@ const Contact = () => {
             </p>
           </div>
 
+          {/* Address */}
           <ul className="mt-5">
             <li className="flex gap-4 items-center mt-4">
               <IoLocationSharp className="text-3xl" />
@@ -83,6 +113,7 @@ const Contact = () => {
             </li>
           </ul>
 
+          {/* Social Media Icons */}
           <p className="mt-5 font-bold text-xl">Follow Me</p>
           <ul className="my-4 flex justify-evenly sm:justify-start sm:gap-10 text-2xl sm:text-xl">
             <li className="p-1 hover:bg-black hover:text-white hover:rounded-md hover:shadow-md">
@@ -113,7 +144,9 @@ const Contact = () => {
           </ul>
         </div>
 
+        {/* Contact Us Form */}
         <form className="w-full md:w-3/5" onSubmit={handleSubmit(sentForm)}>
+          {/* Username */}
           <div className={`${errors?.name?.message ? "mb-3" : "mb-7"}`}>
             <div className="flex items-center">
               <div className="h-10 w-10 text-white bg-blue-700 flex justify-center items-center">
@@ -132,7 +165,7 @@ const Contact = () => {
                     message: "Name must be start with alphabet.",
                   },
                 })}
-                className="h-10 px-4 border-blue-700 border-2 rounded-e outline-none"
+                className="h-10 px-4 border-blue-700 border-2 rounded-e outline-none dark:text-black"
                 placeholder="Name"
                 style={{ width: "100%" }}
               />
@@ -143,6 +176,7 @@ const Contact = () => {
             )}
           </div>
 
+          {/* Email */}
           <div className={`${errors?.email?.message ? "mb-3" : "mb-7"}`}>
             <div className="flex items-center">
               <div className="h-10 w-10 text-white bg-blue-700 flex justify-center items-center">
@@ -157,7 +191,7 @@ const Contact = () => {
                     message: "Invalid email format!",
                   },
                 })}
-                className="h-10 px-4 border-blue-700 border-2 rounded-e outline-none"
+                className="h-10 px-4 border-blue-700 border-2 rounded-e outline-none dark:text-black"
                 placeholder="Email"
                 style={{ width: "100%" }}
               />
@@ -168,6 +202,7 @@ const Contact = () => {
             )}
           </div>
 
+          {/* Message */}
           <div className={`${errors?.message?.message ? "mb-3" : "mb-7"}`}>
             <div className="flex">
               <div className="w-10 text-white bg-blue-700 flex justify-center items-center">
@@ -178,7 +213,7 @@ const Contact = () => {
                 {...register("message", {
                   required: { value: true, message: "Message is required!" },
                 })}
-                className="p-4 min-h-52 border-blue-700 border-2 rounded-e outline-none"
+                className="p-4 min-h-52 border-blue-700 border-2 rounded-e outline-none dark:text-black"
                 placeholder="Message"
                 style={{ width: "100%" }}
               ></textarea>
@@ -189,6 +224,7 @@ const Contact = () => {
             )}
           </div>
 
+          {/* Send Button */}
           <div>
             <input
               type="submit"

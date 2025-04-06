@@ -48,11 +48,10 @@ function App() {
   }, [pointerTStatus]);
 
   let chasePointer = (posx, posy) => {
-    let posXgap = 16;
-    let posYgap = 70;
+    let posYgap = 75;
 
     gsap.to("#pointer", {
-      x: posx - posXgap,
+      x: posx,
       y: posy - posYgap,
       duration: 1,
     });
@@ -87,7 +86,6 @@ function App() {
   }, []);
 
   useEffect(() => {
-    console.log(`Loading: ${loading}`);
     if (loading) window.document.body.style.overflowY = "hidden";
     else window.document.body.style.overflowY = "scroll";
   }, [loading]);
@@ -111,11 +109,6 @@ function App() {
       });
     });
   }, []);
-
-  // <============ Dark Theme ==============>
-  useEffect(() => {
-    console.log(darkTheme);
-  }, [darkTheme]);
 
   return (
     <div className={`${darkTheme && "dark"}`}>
@@ -180,7 +173,7 @@ function App() {
           <Experience />
           <Education />
           <Projects />
-          <Contact func={{ loading, setLoading }} />
+          <Contact props={{ loading, setLoading, hidePointer, showPointer }} />
         </main>
 
         <footer className="w-full dark:border-t-2 dark:border-white">

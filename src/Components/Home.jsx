@@ -138,7 +138,10 @@ const Home = () => {
 
         {/* Social Media Icons */}
         <ul className="flex justify-evenly sm:justify-start sm:gap-10 text-2xl sm:text-xl">
-          <li className="p-1 hover:bg-black hover:dark:bg-white hover:text-white hover:dark:text-black hover:rounded-md hover:shadow-md">
+          <li
+            className="p-1 hover:bg-black hover:dark:bg-white hover:text-white hover:dark:text-black 
+            hover:rounded-md hover:shadow-md"
+          >
             <a href="https://github.com/nischaygadher15">
               <FiGithub />
             </a>

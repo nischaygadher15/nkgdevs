@@ -3,6 +3,7 @@ import { FiSun } from "react-icons/fi";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { IoMdClose } from "react-icons/io";
 import resume from "../assets/MERN_Nkg_Resume.pdf";
+import { FaMoon } from "react-icons/fa";
 
 const Navbar = ({ data }) => {
   let [menu, setMenu] = useState(false);
@@ -81,7 +82,7 @@ const Navbar = ({ data }) => {
                 data.setDarkTheme(!data.darkTheme);
               }}
             >
-              <FiSun className="cursor-pointer" />
+              {data.darkTheme ? <FiSun /> : <FaMoon />}
             </button>
 
             <button

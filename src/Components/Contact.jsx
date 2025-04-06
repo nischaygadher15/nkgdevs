@@ -12,12 +12,13 @@ import { IoCallSharp, IoLocationSharp, IoMailSharp } from "react-icons/io5";
 import { MdAlternateEmail } from "react-icons/md";
 import { toast } from "react-toastify";
 
-const Contact = ({ func }) => {
+const Contact = ({ props }) => {
   let formSendig;
 
   let {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm();
 
@@ -26,12 +27,12 @@ const Contact = ({ func }) => {
     clearTimeout(formSendig);
 
     // Start Loadning
-    func.setLoading(true);
+    props.setLoading(true);
 
     // API to Backend for Mail
     try {
       if (dt) {
-        let res = await fetch("http://localhost:3000/getemail", {
+        let res = await fetch("https://nkgdevsbackend.vercel.app/getemail", {
           method: "POST",
           headers: { "Content-Type": "application/json; charset=utf-8" },
           body: JSON.stringify(dt),
@@ -41,10 +42,11 @@ const Contact = ({ func }) => {
 
         formSendig = setTimeout(() => {
           // Stoping Leadind
-          func.setLoading(false);
+          props.setLoading(false);
 
           // Toast Message
           if (response.status) {
+            reset();
             toast.success("E-Mail sent successfully");
           } else {
             toast.success("E-Mail sent successfully");
@@ -52,7 +54,7 @@ const Contact = ({ func }) => {
         }, 1000);
       }
     } catch (error) {
-      formSendig = setTimeout(() => func.setLoading(false), 1000);
+      formSendig = setTimeout(() => props.setLoading(false), 1000);
       console.log(error.message);
     }
   };
@@ -229,7 +231,7 @@ const Contact = ({ func }) => {
             <input
               type="submit"
               value="SEND MESSAGE"
-              className="text-white bg-blue-700 hover:bg-blue-700 hover:shadow-md rounded-sm py-3 px-5"
+              className="text-white bg-blue-700 hover:bg-blue-800 rounded-sm py-3 px-5"
             />
           </div>
         </form>

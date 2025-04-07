@@ -14,7 +14,7 @@ import smiley from "./assets/smiley.gif";
 
 function App() {
   let [loading, setLoading] = useState(true);
-  let [darkTheme, setDarkTheme] = useState(true);
+  let [darkTheme, setDarkTheme] = useState(false);
   let [pointerTimer, setPointerTime] = useState(5);
   let [pointerTStatus, setPointerTStatus] = useState(false);
   let pointerTimer1;

@@ -24,6 +24,8 @@ const Navbar = ({ data }) => {
     }
   };
 
+  // Resume
+
   useEffect(() => {
     handleMenu(menu);
   }, [menu]);
